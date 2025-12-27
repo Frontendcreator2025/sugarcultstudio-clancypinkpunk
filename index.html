@@ -55,19 +55,10 @@
       }
 
       .gradient-text {
-        background: linear-gradient(135deg, #ff69b4, #b413ec, #ff3366);
+        background: linear-gradient(135deg, #ff3bbf, #9b00ff, #ff6a00);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
-      }
-
-      .product-card {
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-      }
-
-      .product-card:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 20px 40px rgba(180, 19, 236, 0.3);
       }
 
       .chat-message {
@@ -110,37 +101,30 @@
     >
       <!-- Navigation -->
       <nav
-        class="w-full fixed top-0 z-50 backdrop-blur-md"
+        class="w-full fixed top-0 z-50"
         style="
-          background: rgba(26, 0, 51, 0.9);
+          background: rgba(26, 0, 51, 0.95);
           border-bottom: 2px solid #b413ec;
         "
       >
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="flex justify-between items-center h-20">
             <div class="flex items-center space-x-3">
-              <svg
-                class="w-12 h-12 pulse-glow"
-                style="color: #ff69b4"
-                viewbox="0 0 100 100"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M50 10 L70 30 L70 50 L90 70 L70 70 L50 90 L30 70 L10 70 L30 50 L30 30 Z"
-                  fill="currentColor"
-                />
-                <circle cx="50" cy="45" r="15" fill="#B413EC" />
-              </svg>
+              <img
+                src="https://raw.githubusercontent.com/Frontendcreator2025/sugarcultstudio-clancypinkpunk/refs/heads/main/sugarcult2logo.png"
+                alt="Sugar Cult Studio Logo"
+                class="w-20 h-20 object-contain"
+                onerror="this.style.display='none';"
+              />
               <div>
                 <h1
                   id="brand-name"
                   class="text-2xl font-bold"
-                  style="color: #ff69b4"
+                  style="color: #39ff14"
                 >
                   Sugar Cult Studio
                 </h1>
-                <p id="brand-subtitle" class="text-sm" style="color: #00cfff">
+                <p id="brand-subtitle" class="text-sm" style="color: #00bceb">
                   By Clancy Pink Punk
                 </p>
               </div>
@@ -148,40 +132,77 @@
             <div class="hidden md:flex space-x-8">
               <a
                 href="#inicio"
-                class="text-white hover:text-[#FF69B4] transition-colors font-medium"
+                class="text-white hover:text-[#ff00ac] transition-colors font-medium"
                 >Inicio</a
               >
               <a
+                href="#manifiesto"
+                class="text-white hover:text-[#FF1493] transition-colors font-medium"
+                >Manifiesto</a
+              >
+              <a
+                href="#bio"
+                class="text-white hover:text-[#FFFF00] transition-colors font-medium"
+                >Bio</a
+              >
+              <a
                 href="#nosotros"
-                class="text-white hover:text-[#B413EC] transition-colors font-medium"
+                class="text-white hover:text-[#FF6A00] transition-colors font-medium"
                 >Nosotros</a
               >
               <a
-                href="#tienda"
-                class="text-white hover:text-[#FF3366] transition-colors font-medium"
-                >Tienda</a
+                href="#galeria"
+                class="text-white hover:text-[#B413EC] transition-colors font-medium"
+                >Galería</a
+              >
+              <a
+                href="#galactic-queer"
+                class="text-white hover:text-[#FF3BBF] transition-colors font-medium"
+                >Galactic Queer</a
+              >
+              <a
+                href="#esculturas"
+                class="text-white hover:text-[#ffaa00] transition-colors font-medium"
+                >Esculturas</a
               >
               <a
                 href="#contacto"
-                class="text-white hover:text-[#FFEB3B] transition-colors font-medium"
+                class="text-white hover:text-[#06bae7] transition-colors font-medium"
                 >Contacto</a
               >
             </div>
           </div>
         </div>
       </nav>
+      <!-- Logo Hero Section -->
+      <section class="w-full pt-32 pb-12 px-4 flex justify-center items-center">
+        <div class="text-center">
+          <img
+            src="https://raw.githubusercontent.com/Frontendcreator2025/sugarcultstudio-clancypinkpunk/refs/heads/main/sugarcult2logo.png"
+            alt="Sugar Cult Studio Logo"
+            class="w-96 h-96 mx-auto object-contain"
+            onerror="this.style.display='none';"
+          />
+        </div>
+      </section>
       <!-- Hero Section -->
-      <section id="inicio" class="w-full pt-32 pb-20 px-4">
+      <section
+        id="inicio"
+        class="w-full pt-12 pb-20 px-4"
+        style="background: linear-gradient(135deg, #ff00ac 0%, #7200a6 100%)"
+      >
         <div class="max-w-7xl mx-auto">
-          <div class="grid md:grid-cols-2 gap-12 items-center">
-            <div class="space-y-6 slide-up">
+          <div class="grid md:grid-cols-2 gap-8 items-center">
+            <!-- Text Content -->
+            <div class="text-center md:text-left space-y-6 slide-up">
               <h2
                 id="hero-title"
-                class="text-5xl md:text-7xl font-bold gradient-text"
+                class="text-5xl md:text-7xl font-bold"
+                style="color: #ffffff"
               >
                 Arte Digital que Cobra Vida
               </h2>
-              <p id="hero-subtitle" class="text-xl md:text-2xl text-gray-300">
+              <p id="hero-subtitle" class="text-xl md:text-2xl text-white">
                 Esculturas únicas creadas con impresión 3D y cerámica. Donde la
                 tecnología se encuentra con el arte tradicional.
               </p>
@@ -197,83 +218,404 @@
                 Explorar Colección
               </button>
             </div>
-            <div class="relative float-animation">
-              <svg
-                class="w-full h-auto"
-                viewbox="0 0 400 400"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
+            <!-- Dog Sculpture Image -->
+            <div class="flex justify-center md:justify-end">
+              <div class="relative">
+                <img
+                  src="https://raw.githubusercontent.com/Frontendcreator2025/sugarcultstudio-clancypinkpunk/refs/heads/main/sugar%20cul3t.png"
+                  alt="Escultura de Perro Sugar Cult"
+                  class="w-full h-auto object-contain"
+                  style="
+                    filter: drop-shadow(0 0 40px rgba(255, 0, 172, 0.6));
+                    max-width: 800px;
+                  "
+                  onerror="this.style.display='none';"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Manifiesto Section -->
+      <section
+        id="manifiesto"
+        class="w-full py-20 px-4"
+        style="
+          background: linear-gradient(
+            135deg,
+            #ff1493 0%,
+            #ff6a00 50%,
+            #ffff00 100%
+          );
+        "
+      >
+        <div class="max-w-6xl mx-auto">
+          <h2
+            class="text-4xl md:text-6xl font-bold text-center mb-12"
+            style="color: #ffffff; text-shadow: 0 0 20px rgba(0, 0, 0, 0.3)"
+          >
+            🍭✨ Manifiesto Sugar Cult Studio
+          </h2>
+          <div class="space-y-6">
+            <div
+              class="p-6 md:p-8 rounded-3xl"
+              style="
+                background: rgba(0, 0, 0, 0.4);
+                backdrop-filter: blur(10px);
+                border: 3px solid #ffffff;
+              "
+            >
+              <p
+                class="text-white text-xl md:text-2xl font-bold text-center mb-4"
               >
-                <defs>
-                  <lineargradient
-                    id="grad1"
-                    x1="0%"
-                    y1="0%"
-                    x2="100%"
-                    y2="100%"
-                  >
-                    <stop
-                      offset="0%"
-                      style="stop-color: #ff69b4; stop-opacity: 1"
-                    />
-                    <stop
-                      offset="50%"
-                      style="stop-color: #b413ec; stop-opacity: 1"
-                    />
-                    <stop
-                      offset="100%"
-                      style="stop-color: #ff3366; stop-opacity: 1"
-                    />
-                  </lineargradient>
-                  <lineargradient
-                    id="grad2"
-                    x1="0%"
-                    y1="0%"
-                    x2="100%"
-                    y2="100%"
-                  >
-                    <stop
-                      offset="0%"
-                      style="stop-color: #ffeb3b; stop-opacity: 1"
-                    />
-                    <stop
-                      offset="100%"
-                      style="stop-color: #00cfff; stop-opacity: 1"
-                    />
-                  </lineargradient>
-                </defs>
-                <ellipse
-                  cx="200"
-                  cy="300"
-                  rx="150"
-                  ry="30"
-                  fill="url(#grad1)"
-                  opacity="0.3"
+                We don't just make art.<br />
+                We drop pieces.
+              </p>
+              <p class="text-white text-lg md:text-xl text-center">
+                Objetos que slay tan duro que parecen glitch de otro plano.
+              </p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-6">
+              <div
+                class="p-6 rounded-2xl"
+                style="
+                  background: rgba(255, 255, 255, 0.15);
+                  backdrop-filter: blur(10px);
+                  border: 2px solid #00ffff;
+                "
+              >
+                <p class="text-white text-lg leading-relaxed">
+                  <strong style="color: #00ffff">Sugar Cult Studio</strong> es
+                  donde el 3D print meets el craft OG.<br />
+                  Es glossy meets gritty.<br />
+                  Es barro y bits en mood situationship.
+                </p>
+              </div>
+              <div
+                class="p-6 rounded-2xl"
+                style="
+                  background: rgba(255, 255, 255, 0.15);
+                  backdrop-filter: blur(10px);
+                  border: 2px solid #39ff14;
+                "
+              >
+                <p class="text-white text-lg leading-relaxed">
+                  Aquí no hay "mass production",<br />
+                  cada escultura es una
+                  <strong style="color: #39ff14">✨statement piece✨</strong
+                  ><br />
+                  para altar, vitrina o feed.
+                </p>
+              </div>
+            </div>
+            <div
+              class="p-6 md:p-8 rounded-3xl"
+              style="
+                background: rgba(180, 19, 236, 0.3);
+                backdrop-filter: blur(10px);
+                border: 3px solid #b413ec;
+              "
+            >
+              <p
+                class="text-white text-lg md:text-xl leading-relaxed text-center"
+              >
+                Nuestros
+                <strong style="color: #00ffff">perros globo</strong> son más
+                spacecore que Jeff Koons.<br />
+                Nuestras <strong style="color: #ff69b4">lollis</strong> derriten
+                el reality con glitter cósmico.<br />
+                Y nuestras vibes:
+                <strong style="color: #ffff00"
+                  >pop-punk-candy-chaotic-good.</strong
+                >
+              </p>
+            </div>
+            <div
+              class="p-6 rounded-2xl"
+              style="
+                background: rgba(0, 0, 0, 0.4);
+                backdrop-filter: blur(10px);
+                border: 2px solid #ff1493;
+              "
+            >
+              <p class="text-white text-lg leading-relaxed text-center italic">
+                Si lo puedes imaginar high on dopamine y lo-fi dreams...<br />
+                probablemente ya lo hicimos cerámica.
+              </p>
+            </div>
+            <div
+              class="p-6 md:p-8 rounded-3xl"
+              style="
+                background: rgba(255, 255, 255, 0.15);
+                backdrop-filter: blur(10px);
+                border: 3px solid #ff6a00;
+              "
+            >
+              <p class="text-white text-lg md:text-xl leading-relaxed">
+                Nos mueve la cultura que scrollas a las 3AM<br />
+                pero que merece estar en museos IRL.<br />
+                Nos obsesiona lo que brilla, lo que drippea, lo que se siente
+                too much.<br /><strong style="color: #ffff00; font-size: 1.3em"
+                  >Porque ser mucho es el mínimo.</strong
+                >
+              </p>
+            </div>
+            <div
+              class="p-6 md:p-8 rounded-3xl"
+              style="
+                background: rgba(0, 0, 0, 0.3);
+                backdrop-filter: blur(10px);
+                border: 2px solid #ffffff;
+              "
+            >
+              <p
+                class="text-white text-lg md:text-xl leading-relaxed text-center mb-6"
+              >
+                Esto es más que una marca.<br />
+                Es una forma de manifestar lo que el algoritmo no entiende:
+              </p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-4">
+              <div
+                class="p-5 rounded-xl text-center"
+                style="
+                  background: rgba(255, 20, 147, 0.4);
+                  border: 2px solid #ff1493;
+                "
+              >
+                <p class="text-2xl mb-2">💅</p>
+                <p class="text-white font-bold">
+                  Que el arte puede ser cute y político
+                </p>
+              </div>
+              <div
+                class="p-5 rounded-xl text-center"
+                style="
+                  background: rgba(0, 255, 255, 0.4);
+                  border: 2px solid #00ffff;
+                "
+              >
+                <p class="text-2xl mb-2">💅</p>
+                <p class="text-white font-bold">
+                  Que el diseño puede estar loco y tener sentido
+                </p>
+              </div>
+              <div
+                class="p-5 rounded-xl text-center"
+                style="
+                  background: rgba(57, 255, 20, 0.4);
+                  border: 2px solid #39ff14;
+                "
+              >
+                <p class="text-2xl mb-2">💅</p>
+                <p class="text-white font-bold">
+                  Que lo hecho con máquina también tiene corazón
+                </p>
+              </div>
+            </div>
+            <div
+              class="p-6 md:p-8 rounded-3xl"
+              style="
+                background: rgba(0, 0, 0, 0.5);
+                backdrop-filter: blur(10px);
+                border: 3px solid #ffffff;
+                box-shadow: 0 0 40px rgba(255, 255, 255, 0.3);
+              "
+            >
+              <p
+                class="text-white text-xl md:text-2xl font-bold text-center mb-4"
+              >
+                So si vienes por algo soft, sorry not sorry.<br />
+                Aquí todo es <span style="color: #ff1493">loud</span>,
+                <span style="color: #00ffff">weird</span> y
+                <span style="color: #ffff00">slaps hard</span>.
+              </p>
+              <p
+                class="text-white text-2xl md:text-3xl font-bold text-center mt-6"
+              >
+                We're not for everyone.<br /><span
+                  style="color: #ff69b4; font-size: 1.3em"
+                  >We're for the cult.</span
+                >
+                💜
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Bio Clancy Section -->
+      <section
+        id="bio"
+        class="w-full py-20 px-4"
+        style="background: linear-gradient(135deg, #b413ec 0%, #ff1493 100%)"
+      >
+        <div class="max-w-6xl mx-auto">
+          <h2
+            class="text-4xl md:text-6xl font-bold text-center mb-12"
+            style="color: #ffffff"
+          >
+            Clancy Pink Punk
+          </h2>
+          <div class="grid md:grid-cols-2 gap-8 items-center mb-12">
+            <!-- Avatar Image -->
+            <div class="flex justify-center md:justify-end">
+              <div class="relative">
+                <img
+                  src="https://raw.githubusercontent.com/Frontendcreator2025/sugarcultstudio-clancypinkpunk/refs/heads/main/avatar%202.png"
+                  alt="Clancy Pink Punk Avatar"
+                  class="w-full h-auto object-contain"
+                  style="
+                    filter: drop-shadow(0 0 30px rgba(255, 20, 147, 0.5));
+                    max-width: 800px;
+                  "
+                  onerror="this.style.display='none';"
                 />
-                <path
-                  d="M200 100 Q250 150 200 200 Q150 150 200 100"
-                  fill="url(#grad1)"
-                />
-                <path
-                  d="M200 200 Q230 230 200 280 Q170 230 200 200"
-                  fill="url(#grad2)"
-                />
-                <circle cx="200" cy="150" r="40" fill="#AFFF4F" opacity="0.8" />
-                <rect
-                  x="180"
-                  y="280"
-                  width="40"
-                  height="20"
-                  fill="url(#grad1)"
-                  rx="5"
-                />
-                <path
-                  d="M150 250 L200 280 L250 250"
-                  stroke="#00CFFF"
-                  stroke-width="3"
-                  fill="none"
-                />
-              </svg>
+              </div>
+            </div>
+            <!-- Bio Content -->
+            <div class="space-y-6">
+              <div
+                class="p-6 rounded-2xl"
+                style="
+                  background: rgba(255, 255, 255, 0.15);
+                  backdrop-filter: blur(10px);
+                  border: 2px solid rgba(255, 255, 255, 0.3);
+                "
+              >
+                <h3 class="text-2xl font-bold mb-4" style="color: #ffff00">
+                  ✨ Artista Visual Neurodivergente
+                </h3>
+                <p class="text-white text-lg leading-relaxed">
+                  No binarie · Elle/They<br />
+                  Fundadore de
+                  <strong style="color: #00ffff">Delulu Future Dev</strong>
+                </p>
+              </div>
+              <div
+                class="p-6 rounded-2xl"
+                style="
+                  background: rgba(255, 255, 255, 0.15);
+                  backdrop-filter: blur(10px);
+                  border: 2px solid rgba(255, 255, 255, 0.3);
+                "
+              >
+                <h3 class="text-2xl font-bold mb-4" style="color: #39ff14">
+                  💼 Expertis
+                </h3>
+                <div class="grid grid-cols-2 gap-3 text-white">
+                  <div class="flex items-center space-x-2">
+                    <span style="color: #ff1493">🎨</span>
+                    <span>Estrategia Creativa</span>
+                  </div>
+                  <div class="flex items-center space-x-2">
+                    <span style="color: #00ffff">💻</span>
+                    <span>Diseño Digital</span>
+                  </div>
+                  <div class="flex items-center space-x-2">
+                    <span style="color: #ffff00">📱</span>
+                    <span>Comunicación Visual</span>
+                  </div>
+                  <div class="flex items-center space-x-2">
+                    <span style="color: #39ff14">🎭</span>
+                    <span>Performance</span>
+                  </div>
+                  <div class="flex items-center space-x-2">
+                    <span style="color: #ff69b4">✍️</span>
+                    <span>Copywriting</span>
+                  </div>
+                  <div class="flex items-center space-x-2">
+                    <span style="color: #b413ec">👗</span>
+                    <span>Diseño de Moda</span>
+                  </div>
+                  <div class="flex items-center space-x-2">
+                    <span style="color: #ff6a00">🗿</span>
+                    <span>Escultura</span>
+                  </div>
+                  <div class="flex items-center space-x-2">
+                    <span style="color: #00bceb">🖨️</span>
+                    <span>Impresión 3D</span>
+                  </div>
+                  <div class="flex items-center space-x-2">
+                    <span style="color: #ff1493">🎧</span> <span>DJ</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="grid md:grid-cols-2 gap-8 items-center">
+            <!-- Visual Side -->
+            <div class="space-y-6">
+              <div
+                class="p-8 rounded-2xl text-center"
+                style="
+                  background: rgba(0, 0, 0, 0.3);
+                  backdrop-filter: blur(10px);
+                  border: 3px solid #ffff00;
+                  box-shadow: 0 0 40px rgba(255, 255, 0, 0.4);
+                "
+              >
+                <div class="text-8xl mb-4">🌈</div>
+                <p class="text-white text-xl italic leading-relaxed">
+                  "Creo arte que desafía límites, fusionando lo digital con lo
+                  tangible. Cada pieza cuenta una historia de resistencia,
+                  creatividad y autenticidad."
+                </p>
+              </div>
+              <div class="grid grid-cols-3 gap-4">
+                <div
+                  class="p-4 rounded-xl text-center"
+                  style="
+                    background: rgba(255, 20, 147, 0.3);
+                    border: 2px solid #ff1493;
+                  "
+                >
+                  <div class="text-4xl mb-2">����</div>
+                  <p class="text-white text-sm font-bold">Multidisciplinar</p>
+                </div>
+                <div
+                  class="p-4 rounded-xl text-center"
+                  style="
+                    background: rgba(0, 255, 255, 0.3);
+                    border: 2px solid #00ffff;
+                  "
+                >
+                  <div class="text-4xl mb-2">💜</div>
+                  <p class="text-white text-sm font-bold">Auténtique</p>
+                </div>
+                <div
+                  class="p-4 rounded-xl text-center"
+                  style="
+                    background: rgba(57, 255, 20, 0.3);
+                    border: 2px solid #39ff14;
+                  "
+                >
+                  <div class="text-4xl mb-2">✨</div>
+                  <p class="text-white text-sm font-bold">Innovadore</p>
+                </div>
+              </div>
+            </div>
+            <!-- Second Avatar -->
+            <div class="flex justify-center md:justify-start">
+              <div
+                class="p-8 rounded-2xl text-center"
+                style="
+                  background: rgba(0, 0, 0, 0.3);
+                  backdrop-filter: blur(10px);
+                  border: 3px solid #00ffff;
+                  box-shadow: 0 0 40px rgba(0, 255, 255, 0.4);
+                "
+              >
+                <div class="text-8xl mb-4">✨</div>
+                <p
+                  class="text-white text-lg font-bold mb-2"
+                  style="color: #00ffff"
+                >
+                  Creando arte que slaps
+                </p>
+                <p class="text-white text-sm italic">
+                  Lo digital meets lo físico
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -282,60 +624,70 @@
       <section
         id="nosotros"
         class="w-full py-20 px-4"
-        style="background: rgba(180, 19, 236, 0.1)"
+        style="background: linear-gradient(135deg, #06bae7 0%, #077835 100%)"
       >
         <div class="max-w-7xl mx-auto">
           <h2
             id="about-title"
-            class="text-4xl md:text-5xl font-bold text-center mb-12 gradient-text"
+            class="text-4xl md:text-6xl font-bold text-center mb-12"
+            style="color: #ffffff"
           >
             Sobre Nosotros
           </h2>
           <div class="grid md:grid-cols-3 gap-8">
             <div
-              class="text-center p-8 rounded-2xl"
+              class="text-center p-6 md:p-8 rounded-2xl"
               style="
                 background: rgba(255, 105, 180, 0.1);
                 border: 2px solid #ff69b4;
               "
             >
-              <div class="text-6xl mb-4">🎨</div>
-              <h3 class="text-2xl font-bold mb-3" style="color: #ff69b4">
+              <div class="text-5xl md:text-6xl mb-4">🎨</div>
+              <h3
+                class="text-xl md:text-2xl font-bold mb-3"
+                style="color: #ff69b4"
+              >
                 Diseño Único
               </h3>
-              <p class="text-gray-300">
+              <p class="text-white text-sm md:text-base">
                 Cada pieza es una obra de arte original diseñada con pasión y
                 creatividad.
               </p>
             </div>
             <div
-              class="text-center p-8 rounded-2xl"
+              class="text-center p-6 md:p-8 rounded-2xl"
               style="
                 background: rgba(180, 19, 236, 0.1);
                 border: 2px solid #b413ec;
               "
             >
-              <div class="text-6xl mb-4">🖨️</div>
-              <h3 class="text-2xl font-bold mb-3" style="color: #b413ec">
+              <div class="text-5xl md:text-6xl mb-4">🖨️</div>
+              <h3
+                class="text-xl md:text-2xl font-bold mb-3"
+                style="color: #b413ec"
+              >
                 Tecnología 3D
               </h3>
-              <p class="text-gray-300">
+              <p class="text-white text-sm md:text-base">
                 Utilizamos impresión 3D de última generación para dar vida a
                 cada diseño.
               </p>
             </div>
             <div
-              class="text-center p-8 rounded-2xl"
+              class="text-center p-6 md:p-8 rounded-2xl"
               style="
                 background: rgba(255, 51, 102, 0.1);
                 border: 2px solid #ff3366;
               "
             >
-              <div class="text-6xl mb-4">🏺</div>
-              <h3 class="text-2xl font-bold mb-3" style="color: #ff3366">
+              <div class="text-5xl md:text-6xl mb-4">🏺</div>
+              <h3
+                class="text-xl md:text-2xl font-bold mb-3"
+                style="color: #ff3366"
+              >
                 Arte Cerámico
               </h3>
-              <p class="text-gray-300">
+              <p class="text-white text-sm md:text-base">
                 Fusionamos técnicas tradicionales de cerámica con innovación
                 digital.
               </p>
@@ -343,7 +695,7 @@
           </div>
           <p
             id="about-text"
-            class="text-center text-xl text-gray-300 mt-12 max-w-3xl mx-auto"
+            class="text-center text-lg md:text-xl text-white mt-12 max-w-3xl mx-auto px-4"
           >
             Sugar Cult Studio nace de la visión de Clancy Pink Punk: crear
             esculturas que desafían los límites entre lo digital y lo físico,
@@ -352,478 +704,647 @@
           </p>
         </div>
       </section>
-      <!-- Shop Section -->
-      <section id="tienda" class="w-full py-20 px-4">
+      <!-- Gallery Section -->
+      <section
+        id="galeria"
+        class="w-full py-20 px-4"
+        style="background: linear-gradient(135deg, #06bae7 0%, #7200a6 100%)"
+      >
         <div class="max-w-7xl mx-auto">
           <h2
-            id="shop-title"
-            class="text-4xl md:text-5xl font-bold text-center mb-12 gradient-text"
+            class="text-4xl md:text-6xl font-bold text-center mb-12"
+            style="color: #ffffff"
           >
-            Nuestra Tienda
+            Galería
           </h2>
-          <div class="grid md:grid-cols-3 gap-8">
-            <!-- Product 1 -->
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
             <div
-              class="product-card rounded-2xl overflow-hidden"
-              style="
-                background: rgba(255, 105, 180, 0.1);
-                border: 2px solid #ff69b4;
-              "
+              class="gallery-item relative overflow-hidden rounded-xl cursor-pointer transition-all duration-300 hover:scale-105"
+              style="border: 3px solid #ff00ac"
+              data-index="0"
             >
+              <img
+                src="https://raw.githubusercontent.com/Frontendcreator2025/sugarcultstudio-clancypinkpunk/refs/heads/main/META72.jpg"
+                alt="Sugar Cult Gallery 1"
+                class="w-full h-64 object-cover"
+                onerror="this.style.display='none';"
+              />
+            </div>
+            <div
+              class="gallery-item relative overflow-hidden rounded-xl cursor-pointer transition-all duration-300 hover:scale-105"
+              style="border: 3px solid #b413ec"
+              data-index="1"
+            >
+              <img
+                src="https://raw.githubusercontent.com/Frontendcreator2025/sugarcultstudio-clancypinkpunk/refs/heads/main/META75.jpg"
+                alt="Sugar Cult Gallery 2"
+                class="w-full h-64 object-cover"
+                onerror="this.style.display='none';"
+              />
+            </div>
+            <div
+              class="gallery-item relative overflow-hidden rounded-xl cursor-pointer transition-all duration-300 hover:scale-105"
+              style="border: 3px solid #ff6a00"
+              data-index="2"
+            >
+              <img
+                src="https://raw.githubusercontent.com/Frontendcreator2025/sugarcultstudio-clancypinkpunk/refs/heads/main/META77.jpg"
+                alt="Sugar Cult Gallery 3"
+                class="w-full h-64 object-cover"
+                onerror="this.style.display='none';"
+              />
+            </div>
+            <div
+              class="gallery-item relative overflow-hidden rounded-xl cursor-pointer transition-all duration-300 hover:scale-105"
+              style="border: 3px solid #00cfff"
+              data-index="3"
+            >
+              <img
+                src="https://raw.githubusercontent.com/Frontendcreator2025/sugarcultstudio-clancypinkpunk/refs/heads/main/META76.jpg"
+                alt="Sugar Cult Gallery 4"
+                class="w-full h-64 object-cover"
+                onerror="this.style.display='none';"
+              />
+            </div>
+            <div
+              class="gallery-item relative overflow-hidden rounded-xl cursor-pointer transition-all duration-300 hover:scale-105"
+              style="border: 3px solid #afff4f"
+              data-index="4"
+            >
+              <img
+                src="https://raw.githubusercontent.com/Frontendcreator2025/sugarcultstudio-clancypinkpunk/refs/heads/main/META74.jpg"
+                alt="Sugar Cult Gallery 5"
+                class="w-full h-64 object-cover"
+                onerror="this.style.display='none';"
+              />
+            </div>
+            <div
+              class="gallery-item relative overflow-hidden rounded-xl cursor-pointer transition-all duration-300 hover:scale-105"
+              style="border: 3px solid #ffeb3b"
+              data-index="5"
+            >
+              <img
+                src="https://raw.githubusercontent.com/Frontendcreator2025/sugarcultstudio-clancypinkpunk/refs/heads/main/META78.jpg"
+                alt="Sugar Cult Gallery 6"
+                class="w-full h-64 object-cover"
+                onerror="this.style.display='none';"
+              />
+            </div>
+            <div
+              class="gallery-item relative overflow-hidden rounded-xl cursor-pointer transition-all duration-300 hover:scale-105"
+              style="border: 3px solid #ff3366"
+              data-index="6"
+            >
+              <img
+                src="https://raw.githubusercontent.com/Frontendcreator2025/sugarcultstudio-clancypinkpunk/refs/heads/main/META79.jpg"
+                alt="Sugar Cult Gallery 7"
+                class="w-full h-64 object-cover"
+                onerror="this.style.display='none';"
+              />
+            </div>
+            <div
+              class="gallery-item relative overflow-hidden rounded-xl cursor-pointer transition-all duration-300 hover:scale-105"
+              style="border: 3px solid #ff00ac"
+              data-index="7"
+            >
+              <img
+                src="https://raw.githubusercontent.com/Frontendcreator2025/sugarcultstudio-clancypinkpunk/refs/heads/main/META73.jpg"
+                alt="Sugar Cult Gallery 8"
+                class="w-full h-64 object-cover"
+                onerror="this.style.display='none';"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Gallery Modal -->
+      <div
+        id="gallery-modal"
+        class="fixed inset-0 bg-black bg-opacity-90 hidden items-center justify-center z-50"
+        style="backdrop-filter: blur(10px)"
+      >
+        <button
+          id="modal-close"
+          class="absolute top-8 right-8 text-white text-4xl hover:text-[#ff00ac] transition-colors z-60"
+        >
+          ×
+        </button>
+        <button
+          id="modal-prev"
+          class="absolute left-8 text-white text-4xl hover:text-[#ff00ac] transition-colors z-60"
+        >
+          ‹
+        </button>
+        <button
+          id="modal-next"
+          class="absolute right-8 text-white text-4xl hover:text-[#ff00ac] transition-colors z-60"
+        >
+          ›
+        </button>
+        <div class="max-w-5xl max-h-[90%] p-4">
+          <img
+            id="modal-image"
+            src=""
+            alt="Gallery Image"
+            class="w-full h-full object-contain rounded-xl"
+            style="box-shadow: 0 0 50px rgba(255, 0, 172, 0.5)"
+          />
+        </div>
+      </div>
+      <!-- Galactic Queer Section -->
+      <section
+        id="galactic-queer"
+        class="w-full py-20 px-4"
+        style="
+          background: linear-gradient(
+            135deg,
+            #9b00ff 0%,
+            #ff3bbf 50%,
+            #00ffff 100%
+          );
+        "
+      >
+        <div class="max-w-7xl mx-auto">
+          <h2
+            class="text-4xl md:text-6xl font-bold text-center mb-4"
+            style="
+              color: #ffffff;
+              text-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+            "
+          >
+            🌌 GALACTIC QUEER ✨
+          </h2>
+          <p
+            class="text-center text-xl md:text-2xl text-white mb-12 max-w-3xl mx-auto"
+          >
+            Una colección cósmica que celebra la diversidad, el amor y la
+            identidad sin límites. Arte que trasciende galaxias y géneros.
+          </p>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div
+              class="galactic-item relative overflow-hidden rounded-2xl cursor-pointer transition-all duration-500 hover:scale-105 hover:rotate-1"
+              style="
+                border: 3px solid #ff3bbf;
+                box-shadow: 0 0 30px rgba(255, 59, 191, 0.6);
+              "
+              data-galactic-index="0"
+            >
+              <img
+                src="https://raw.githubusercontent.com/Frontendcreator2025/sugarcultstudio-clancypinkpunk/refs/heads/main/QUEER%20GALACTIC%20(5).jpg"
+                alt="Galactic Queer 1"
+                class="w-full h-80 object-cover"
+                onerror="this.style.display='none';"
+              />
               <div
-                class="p-6"
-                style="
-                  background: linear-gradient(
-                    135deg,
-                    rgba(255, 105, 180, 0.2),
-                    rgba(180, 19, 236, 0.2)
-                  );
-                "
+                class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-4"
               >
-                <svg
-                  class="w-full h-48"
-                  viewbox="0 0 200 200"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <ellipse
-                    cx="100"
-                    cy="160"
-                    rx="60"
-                    ry="15"
-                    fill="#FF69B4"
-                    opacity="0.3"
-                  />
-                  <path d="M100 50 L120 80 L100 110 L80 80 Z" fill="#FF69B4" />
-                  <circle cx="100" cy="90" r="25" fill="#B413EC" />
-                  <rect
-                    x="90"
-                    y="110"
-                    width="20"
-                    height="50"
-                    fill="#FF3366"
-                    rx="3"
-                  />
-                </svg>
-              </div>
-              <div class="p-6">
-                <h3 class="text-2xl font-bold mb-2" style="color: #ff69b4">
-                  Escultura Prisma
-                </h3>
-                <p class="text-gray-300 mb-4">
-                  Pieza geométrica en cerámica con acabado metálico
-                </p>
-                <div class="flex justify-between items-center">
-                  <span class="text-2xl font-bold" style="color: #ffeb3b"
-                    >$149</span
-                  >
-                  <button
-                    class="add-to-cart px-6 py-2 rounded-full font-bold transition-all duration-300 hover:scale-105"
-                    style="background: #ff69b4; color: white"
-                  >
-                    Agregar
-                  </button>
-                </div>
+                <p class="text-white font-bold text-lg">✨ Cosmic Identity</p>
               </div>
             </div>
-            <!-- Product 2 -->
             <div
-              class="product-card rounded-2xl overflow-hidden"
+              class="galactic-item relative overflow-hidden rounded-2xl cursor-pointer transition-all duration-500 hover:scale-105 hover:rotate-1"
               style="
-                background: rgba(180, 19, 236, 0.1);
-                border: 2px solid #b413ec;
+                border: 3px solid #00ffff;
+                box-shadow: 0 0 30px rgba(0, 255, 255, 0.6);
               "
+              data-galactic-index="1"
             >
+              <img
+                src="https://raw.githubusercontent.com/Frontendcreator2025/sugarcultstudio-clancypinkpunk/refs/heads/main/QUEER%20GALACTIC%20(1).jpg"
+                alt="Galactic Queer 2"
+                class="w-full h-80 object-cover"
+                onerror="this.style.display='none';"
+              />
               <div
-                class="p-6"
-                style="
-                  background: linear-gradient(
-                    135deg,
-                    rgba(180, 19, 236, 0.2),
-                    rgba(255, 51, 102, 0.2)
-                  );
-                "
+                class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-4"
               >
-                <svg
-                  class="w-full h-48"
-                  viewbox="0 0 200 200"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <ellipse
-                    cx="100"
-                    cy="160"
-                    rx="60"
-                    ry="15"
-                    fill="#B413EC"
-                    opacity="0.3"
-                  />
-                  <circle cx="100" cy="80" r="40" fill="#B413EC" />
-                  <circle cx="100" cy="80" r="25" fill="#FF3366" />
-                  <circle cx="100" cy="80" r="15" fill="#FFEB3B" />
-                  <rect
-                    x="85"
-                    y="120"
-                    width="30"
-                    height="40"
-                    fill="#00CFFF"
-                    rx="5"
-                  />
-                </svg>
-              </div>
-              <div class="p-6">
-                <h3 class="text-2xl font-bold mb-2" style="color: #b413ec">
-                  Órbita Celestial
-                </h3>
-                <p class="text-gray-300 mb-4">
-                  Escultura circular impresa en 3D con colores vibrantes
-                </p>
-                <div class="flex justify-between items-center">
-                  <span class="text-2xl font-bold" style="color: #ffeb3b"
-                    >$199</span
-                  >
-                  <button
-                    class="add-to-cart px-6 py-2 rounded-full font-bold transition-all duration-300 hover:scale-105"
-                    style="background: #b413ec; color: white"
-                  >
-                    Agregar
-                  </button>
-                </div>
+                <p class="text-white font-bold text-lg">🌈 Rainbow Universe</p>
               </div>
             </div>
-            <!-- Product 3 -->
             <div
-              class="product-card rounded-2xl overflow-hidden"
+              class="galactic-item relative overflow-hidden rounded-2xl cursor-pointer transition-all duration-500 hover:scale-105 hover:rotate-1"
               style="
-                background: rgba(255, 51, 102, 0.1);
-                border: 2px solid #ff3366;
+                border: 3px solid #9b00ff;
+                box-shadow: 0 0 30px rgba(155, 0, 255, 0.6);
               "
+              data-galactic-index="2"
             >
+              <img
+                src="https://raw.githubusercontent.com/Frontendcreator2025/sugarcultstudio-clancypinkpunk/refs/heads/main/QUEER%20GALACTIC%20(2).jpg"
+                alt="Galactic Queer 3"
+                class="w-full h-80 object-cover"
+                onerror="this.style.display='none';"
+              />
               <div
-                class="p-6"
-                style="
-                  background: linear-gradient(
-                    135deg,
-                    rgba(255, 51, 102, 0.2),
-                    rgba(0, 207, 255, 0.2)
-                  );
-                "
+                class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-4"
               >
-                <svg
-                  class="w-full h-48"
-                  viewbox="0 0 200 200"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <ellipse
-                    cx="100"
-                    cy="160"
-                    rx="60"
-                    ry="15"
-                    fill="#FF3366"
-                    opacity="0.3"
-                  />
-                  <path
-                    d="M100 60 L130 100 L100 140 L70 100 Z"
-                    fill="#FF3366"
-                  />
-                  <path
-                    d="M100 80 L115 100 L100 120 L85 100 Z"
-                    fill="#00CFFF"
-                  />
-                  <rect
-                    x="95"
-                    y="140"
-                    width="10"
-                    height="20"
-                    fill="#AFFF4F"
-                    rx="2"
-                  />
-                </svg>
-              </div>
-              <div class="p-6">
-                <h3 class="text-2xl font-bold mb-2" style="color: #ff3366">
-                  Cristal Digital
-                </h3>
-                <p class="text-gray-300 mb-4">
-                  Forma diamantada en cerámica translúcida
-                </p>
-                <div class="flex justify-between items-center">
-                  <span class="text-2xl font-bold" style="color: #ffeb3b"
-                    >$179</span
-                  >
-                  <button
-                    class="add-to-cart px-6 py-2 rounded-full font-bold transition-all duration-300 hover:scale-105"
-                    style="background: #ff3366; color: white"
-                  >
-                    Agregar
-                  </button>
-                </div>
+                <p class="text-white font-bold text-lg">💜 Love Beyond Stars</p>
               </div>
             </div>
-            <!-- Product 4 -->
             <div
-              class="product-card rounded-2xl overflow-hidden"
+              class="galactic-item relative overflow-hidden rounded-2xl cursor-pointer transition-all duration-500 hover:scale-105 hover:rotate-1"
               style="
-                background: rgba(0, 207, 255, 0.1);
-                border: 2px solid #00cfff;
+                border: 3px solid #ffff00;
+                box-shadow: 0 0 30px rgba(255, 255, 0, 0.6);
               "
+              data-galactic-index="3"
             >
+              <img
+                src="https://raw.githubusercontent.com/Frontendcreator2025/sugarcultstudio-clancypinkpunk/refs/heads/main/QUEER%20GALACTIC%20(3).jpg"
+                alt="Galactic Queer 4"
+                class="w-full h-80 object-cover"
+                onerror="this.style.display='none';"
+              />
               <div
-                class="p-6"
-                style="
-                  background: linear-gradient(
-                    135deg,
-                    rgba(0, 207, 255, 0.2),
-                    rgba(175, 255, 79, 0.2)
-                  );
-                "
+                class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-4"
               >
-                <svg
-                  class="w-full h-48"
-                  viewbox="0 0 200 200"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <ellipse
-                    cx="100"
-                    cy="160"
-                    rx="60"
-                    ry="15"
-                    fill="#00CFFF"
-                    opacity="0.3"
-                  />
-                  <path
-                    d="M100 60 Q120 80 100 100 Q80 80 100 60"
-                    fill="#00CFFF"
-                  />
-                  <path
-                    d="M100 100 Q115 115 100 140 Q85 115 100 100"
-                    fill="#AFFF4F"
-                  />
-                  <circle cx="100" cy="85" r="15" fill="#FFEB3B" />
-                  <rect
-                    x="92"
-                    y="140"
-                    width="16"
-                    height="20"
-                    fill="#FF69B4"
-                    rx="3"
-                  />
-                </svg>
-              </div>
-              <div class="p-6">
-                <h3 class="text-2xl font-bold mb-2" style="color: #00cfff">
-                  Flor Neon
-                </h3>
-                <p class="text-gray-300 mb-4">
-                  Diseño orgánico con acabado fluorescente
-                </p>
-                <div class="flex justify-between items-center">
-                  <span class="text-2xl font-bold" style="color: #ffeb3b"
-                    >$169</span
-                  >
-                  <button
-                    class="add-to-cart px-6 py-2 rounded-full font-bold transition-all duration-300 hover:scale-105"
-                    style="background: #00cfff; color: white"
-                  >
-                    Agregar
-                  </button>
-                </div>
+                <p class="text-white font-bold text-lg">⭐ Stellar Pride</p>
               </div>
             </div>
-            <!-- Product 5 -->
             <div
-              class="product-card rounded-2xl overflow-hidden"
+              class="galactic-item relative overflow-hidden rounded-2xl cursor-pointer transition-all duration-500 hover:scale-105 hover:rotate-1"
               style="
-                background: rgba(175, 255, 79, 0.1);
-                border: 2px solid #afff4f;
+                border: 3px solid #ff69b4;
+                box-shadow: 0 0 30px rgba(255, 105, 180, 0.6);
               "
+              data-galactic-index="4"
             >
+              <img
+                src="https://raw.githubusercontent.com/Frontendcreator2025/sugarcultstudio-clancypinkpunk/refs/heads/main/QUEER%20GALACTIC%20(4).jpg"
+                alt="Galactic Queer 5"
+                class="w-full h-80 object-cover"
+                onerror="this.style.display='none';"
+              />
               <div
-                class="p-6"
-                style="
-                  background: linear-gradient(
-                    135deg,
-                    rgba(175, 255, 79, 0.2),
-                    rgba(255, 235, 59, 0.2)
-                  );
-                "
+                class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-4"
               >
-                <svg
-                  class="w-full h-48"
-                  viewbox="0 0 200 200"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <ellipse
-                    cx="100"
-                    cy="160"
-                    rx="60"
-                    ry="15"
-                    fill="#AFFF4F"
-                    opacity="0.3"
-                  />
-                  <rect
-                    x="70"
-                    y="100"
-                    width="60"
-                    height="60"
-                    fill="#AFFF4F"
-                    rx="10"
-                  />
-                  <circle cx="85" cy="115" r="10" fill="#FFEB3B" />
-                  <circle cx="115" cy="115" r="10" fill="#FF69B4" />
-                  <path
-                    d="M85 135 Q100 145 115 135"
-                    stroke="#B413EC"
-                    stroke-width="3"
-                    fill="none"
-                  />
-                </svg>
-              </div>
-              <div class="p-6">
-                <h3 class="text-2xl font-bold mb-2" style="color: #afff4f">
-                  Cubo Feliz
-                </h3>
-                <p class="text-gray-300 mb-4">
-                  Escultura minimalista con expresión alegre
+                <p class="text-white font-bold text-lg">
+                  🚀 Infinite Expression
                 </p>
-                <div class="flex justify-between items-center">
-                  <span class="text-2xl font-bold" style="color: #ffeb3b"
-                    >$129</span
-                  >
-                  <button
-                    class="add-to-cart px-6 py-2 rounded-full font-bold transition-all duration-300 hover:scale-105"
-                    style="background: #afff4f; color: #1a0033"
-                  >
-                    Agregar
-                  </button>
-                </div>
-              </div>
-            </div>
-            <!-- Product 6 -->
-            <div
-              class="product-card rounded-2xl overflow-hidden"
-              style="
-                background: rgba(255, 235, 59, 0.1);
-                border: 2px solid #ffeb3b;
-              "
-            >
-              <div
-                class="p-6"
-                style="
-                  background: linear-gradient(
-                    135deg,
-                    rgba(255, 235, 59, 0.2),
-                    rgba(255, 105, 180, 0.2)
-                  );
-                "
-              >
-                <svg
-                  class="w-full h-48"
-                  viewbox="0 0 200 200"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <ellipse
-                    cx="100"
-                    cy="160"
-                    rx="60"
-                    ry="15"
-                    fill="#FFEB3B"
-                    opacity="0.3"
-                  />
-                  <polygon
-                    points="100,50 130,90 115,130 85,130 70,90"
-                    fill="#FFEB3B"
-                  />
-                  <circle cx="100" cy="90" r="20" fill="#FF69B4" />
-                  <rect
-                    x="90"
-                    y="130"
-                    width="20"
-                    height="30"
-                    fill="#B413EC"
-                    rx="3"
-                  />
-                </svg>
-              </div>
-              <div class="p-6">
-                <h3 class="text-2xl font-bold mb-2" style="color: #ffeb3b">
-                  Estrella Pop
-                </h3>
-                <p class="text-gray-300 mb-4">
-                  Forma estrellada con colores vibrantes pop
-                </p>
-                <div class="flex justify-between items-center">
-                  <span class="text-2xl font-bold" style="color: #ffeb3b"
-                    >$159</span
-                  >
-                  <button
-                    class="add-to-cart px-6 py-2 rounded-full font-bold transition-all duration-300 hover:scale-105"
-                    style="background: #ffeb3b; color: #1a0033"
-                  >
-                    Agregar
-                  </button>
-                </div>
               </div>
             </div>
           </div>
+          <div class="text-center mt-12">
+            <p
+              class="text-2xl md:text-3xl font-bold text-white"
+              style="text-shadow: 0 0 20px rgba(255, 255, 255, 0.5)"
+            >
+              🌟 Celebrando la diversidad en cada dimensión 🌟
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- Galactic Queer Modal -->
+      <div
+        id="galactic-modal"
+        class="fixed inset-0 bg-black bg-opacity-95 hidden items-center justify-center z-50"
+        style="backdrop-filter: blur(15px)"
+      >
+        <button
+          id="galactic-modal-close"
+          class="absolute top-8 right-8 text-white text-4xl hover:text-[#FF3BBF] transition-colors z-60"
+        >
+          ×
+        </button>
+        <button
+          id="galactic-modal-prev"
+          class="absolute left-8 text-white text-4xl hover:text-[#FF3BBF] transition-colors z-60"
+        >
+          ‹
+        </button>
+        <button
+          id="galactic-modal-next"
+          class="absolute right-8 text-white text-4xl hover:text-[#FF3BBF] transition-colors z-60"
+        >
+          ›
+        </button>
+        <div class="max-w-6xl max-h-[90%] p-4">
+          <img
+            id="galactic-modal-image"
+            src=""
+            alt="Galactic Queer Image"
+            class="w-full h-full object-contain rounded-xl"
+            style="box-shadow: 0 0 60px rgba(255, 59, 191, 0.7)"
+          />
+        </div>
+      </div>
+      <!-- Sculptures Carousel Section -->
+      <section
+        id="esculturas"
+        class="w-full py-20 px-4"
+        style="background: linear-gradient(135deg, #160329 0%, #7200a6 100%)"
+      >
+        <div class="max-w-7xl mx-auto">
+          <h2
+            class="text-4xl md:text-6xl font-bold text-center mb-12"
+            style="color: #ffffff"
+          >
+            Nuestras Esculturas
+          </h2>
+          <!-- Carousel Container -->
+          <div class="relative max-w-4xl mx-auto">
+            <div
+              class="carousel-container overflow-hidden rounded-3xl"
+              style="
+                border: 3px solid #ff00ac;
+                box-shadow: 0 0 30px rgba(255, 0, 172, 0.4);
+              "
+            >
+              <div
+                id="sculptures-carousel"
+                class="flex transition-transform duration-500 ease-in-out"
+              >
+                <div class="carousel-slide min-w-full">
+                  <img
+                    src="https://raw.githubusercontent.com/Frontendcreator2025/sugarcultstudio-clancypinkpunk/refs/heads/main/sugar%20cul3t.png"
+                    alt="Sugar Cult Escultura"
+                    class="w-full h-[500px] object-contain bg-gradient-to-br from-purple-900 to-pink-900"
+                    onerror="this.style.display='none';"
+                  />
+                </div>
+                <div class="carousel-slide min-w-full">
+                  <img
+                    src="https://raw.githubusercontent.com/Frontendcreator2025/sugarcultstudio-clancypinkpunk/refs/heads/main/1.jpg"
+                    alt="Escultura 1"
+                    class="w-full h-[500px] object-cover"
+                    onerror="this.style.display='none';"
+                  />
+                </div>
+                <div class="carousel-slide min-w-full">
+                  <img
+                    src="https://raw.githubusercontent.com/Frontendcreator2025/sugarcultstudio-clancypinkpunk/refs/heads/main/9.jpg"
+                    alt="Escultura 2"
+                    class="w-full h-[500px] object-cover"
+                    onerror="this.style.display='none';"
+                  />
+                </div>
+                <div class="carousel-slide min-w-full">
+                  <img
+                    src="https://raw.githubusercontent.com/Frontendcreator2025/sugarcultstudio-clancypinkpunk/refs/heads/main/20.jpg"
+                    alt="Escultura 3"
+                    class="w-full h-[500px] object-cover"
+                    onerror="this.style.display='none';"
+                  />
+                </div>
+                <div class="carousel-slide min-w-full">
+                  <img
+                    src="https://raw.githubusercontent.com/Frontendcreator2025/sugarcultstudio-clancypinkpunk/refs/heads/main/8.jpg"
+                    alt="Escultura 4"
+                    class="w-full h-[500px] object-cover"
+                    onerror="this.style.display='none';"
+                  />
+                </div>
+                <div class="carousel-slide min-w-full">
+                  <img
+                    src="https://raw.githubusercontent.com/Frontendcreator2025/sugarcultstudio-clancypinkpunk/refs/heads/main/16.jpg"
+                    alt="Escultura 5"
+                    class="w-full h-[500px] object-cover"
+                    onerror="this.style.display='none';"
+                  />
+                </div>
+                <div class="carousel-slide min-w-full">
+                  <img
+                    src="https://raw.githubusercontent.com/Frontendcreator2025/sugarcultstudio-clancypinkpunk/refs/heads/main/17.jpg"
+                    alt="Escultura 6"
+                    class="w-full h-[500px] object-cover"
+                    onerror="this.style.display='none';"
+                  />
+                </div>
+                <div class="carousel-slide min-w-full">
+                  <img
+                    src="https://raw.githubusercontent.com/Frontendcreator2025/sugarcultstudio-clancypinkpunk/refs/heads/main/15.jpg"
+                    alt="Escultura 7"
+                    class="w-full h-[500px] object-cover"
+                    onerror="this.style.display='none';"
+                  />
+                </div>
+                <div class="carousel-slide min-w-full">
+                  <img
+                    src="https://raw.githubusercontent.com/Frontendcreator2025/sugarcultstudio-clancypinkpunk/refs/heads/main/6.jpg"
+                    alt="Escultura 8"
+                    class="w-full h-[500px] object-cover"
+                    onerror="this.style.display='none';"
+                  />
+                </div>
+                <div class="carousel-slide min-w-full">
+                  <img
+                    src="https://raw.githubusercontent.com/Frontendcreator2025/sugarcultstudio-clancypinkpunk/refs/heads/main/5.jpg"
+                    alt="Escultura 9"
+                    class="w-full h-[500px] object-cover"
+                    onerror="this.style.display='none';"
+                  />
+                </div>
+                <div class="carousel-slide min-w-full">
+                  <img
+                    src="https://raw.githubusercontent.com/Frontendcreator2025/sugarcultstudio-clancypinkpunk/refs/heads/main/2.jpg"
+                    alt="Escultura 10"
+                    class="w-full h-[500px] object-cover"
+                    onerror="this.style.display='none';"
+                  />
+                </div>
+                <div class="carousel-slide min-w-full">
+                  <img
+                    src="https://raw.githubusercontent.com/Frontendcreator2025/sugarcultstudio-clancypinkpunk/refs/heads/main/4.jpg"
+                    alt="Escultura 11"
+                    class="w-full h-[500px] object-cover"
+                    onerror="this.style.display='none';"
+                  />
+                </div>
+              </div>
+            </div>
+            <!-- Navigation Buttons -->
+            <button
+              id="sculptures-prev"
+              class="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full flex items-center justify-center text-2xl font-bold transition-all duration-300 hover:scale-110 z-10"
+              style="
+                background: rgba(255, 0, 172, 0.9);
+                color: white;
+                box-shadow: 0 4px 15px rgba(255, 0, 172, 0.5);
+              "
+            >
+              ‹
+            </button>
+            <button
+              id="sculptures-next"
+              class="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full flex items-center justify-center text-2xl font-bold transition-all duration-300 hover:scale-110 z-10"
+              style="
+                background: rgba(255, 0, 172, 0.9);
+                color: white;
+                box-shadow: 0 4px 15px rgba(255, 0, 172, 0.5);
+              "
+            >
+              ›
+            </button>
+            <!-- Indicators -->
+            <div
+              id="sculptures-indicators"
+              class="flex justify-center gap-2 mt-6"
+            ></div>
+          </div>
+          <p class="text-center text-xl text-white mt-8">
+            💬 Contáctanos para conocer precios y disponibilidad
+          </p>
         </div>
       </section>
       <!-- Contact Section -->
       <section
         id="contacto"
         class="w-full py-20 px-4"
-        style="background: rgba(255, 105, 180, 0.1)"
+        style="background: linear-gradient(135deg, #ff6a00 0%, #ffaa00 100%)"
       >
-        <div class="max-w-3xl mx-auto text-center">
+        <div class="max-w-5xl mx-auto">
           <h2
             id="contact-title"
-            class="text-4xl md:text-5xl font-bold mb-8 gradient-text"
+            class="text-4xl md:text-6xl font-bold text-center mb-12"
+            style="color: #ffffff"
           >
             Contáctanos
           </h2>
-          <p class="text-xl text-gray-300 mb-8">
-            ¿Tienes una idea para una escultura personalizada? ¡Hablemos!
-          </p>
-          <div class="flex flex-wrap justify-center gap-6">
-            <a
-              href="https://instagram.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="px-8 py-4 rounded-full font-bold transition-all duration-300 transform hover:scale-105"
+          <!-- Contact Cards -->
+          <div class="grid md:grid-cols-2 gap-8 mb-12">
+            <!-- Contact Info Card -->
+            <div
+              class="p-8 rounded-3xl"
               style="
-                background: linear-gradient(135deg, #ff69b4, #b413ec);
-                color: white;
+                background: rgba(255, 255, 255, 0.1);
+                backdrop-filter: blur(10px);
+                border: 2px solid rgba(255, 255, 255, 0.3);
               "
             >
-              📱 Instagram
-            </a>
-            <a
-              href="mailto:info@sugarcult.studio"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="px-8 py-4 rounded-full font-bold transition-all duration-300 transform hover:scale-105"
+              <h3 class="text-2xl font-bold mb-6" style="color: #8b00ff">
+                📍 Info de Contacto
+              </h3>
+              <div class="space-y-4" style="color: #8b00ff">
+                <p>
+                  <strong>📧 Email:</strong><br /><a
+                    href="mailto:clancypinkpunk@gmail.com"
+                    class="hover:text-[#FF69B4] transition-colors"
+                    >clancypinkpunk@gmail.com</a
+                  >
+                </p>
+                <p>
+                  <strong>📱 WhatsApp:</strong><br /><a
+                    href="https://wa.me/5215610677516"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="hover:text-[#FF69B4] transition-colors"
+                    >56 1067 7516</a
+                  >
+                </p>
+                <p>
+                  <strong>📍 Dirección:</strong><br />
+                  Toltecas 166<br />
+                  San Pedro de los Pinos<br />
+                  CDMX 01180
+                </p>
+              </div>
+            </div>
+            <!-- Purchase Info Card -->
+            <div
+              class="p-8 rounded-3xl"
               style="
-                background: linear-gradient(135deg, #00cfff, #afff4f);
-                color: #1a0033;
+                background: rgba(255, 255, 255, 0.1);
+                backdrop-filter: blur(10px);
+                border: 2px solid rgba(255, 255, 255, 0.3);
               "
             >
-              ✉���� Email
-            </a>
+              <h3 class="text-2xl font-bold mb-6" style="color: #8b00ff">
+                💳 Info de Compra
+              </h3>
+              <div class="space-y-4" style="color: #8b00ff">
+                <p>
+                  <strong>💰 Precio:</strong><br />
+                  Comercio Justo
+                </p>
+                <p>
+                  <strong>💳 Pago:</strong><br />
+                  Efectivo o transferencia NU<br />
+                  CLABE interbancaria disponible
+                </p>
+                <p>
+                  <strong>🚴‍♀️ Entrega:</strong><br />
+                  En bicicleta a domicilio<br />
+                  o punto medio en metro
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Social Media Buttons -->
+          <div class="text-center">
+            <p class="text-xl font-bold mb-6" style="color: #ffffff">
+              Síguenos en redes sociales 💜
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+              <a
+                href="https://instagram.com/clancypinkpunk"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="px-6 py-3 rounded-full font-bold transition-all duration-300 transform hover:scale-110 hover:brightness-125"
+                style="
+                  background: #ff1493;
+                  color: white;
+                  box-shadow: 0 0 25px #ff1493, 0 0 50px rgba(255, 20, 147, 0.6);
+                  border: 2px solid #ff69b4;
+                "
+              >
+                📱 Instagram
+              </a>
+              <a
+                href="https://tiktok.com/@clancypinkpunk"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="px-6 py-3 rounded-full font-bold transition-all duration-300 transform hover:scale-110 hover:brightness-125"
+                style="
+                  background: #00ffff;
+                  color: #000000;
+                  box-shadow: 0 0 25px #00ffff, 0 0 50px rgba(0, 255, 255, 0.6);
+                  border: 2px solid #00ffff;
+                "
+              >
+                ���� TikTok
+              </a>
+              <a
+                href="https://github.com/clancypinkpunk"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="px-6 py-3 rounded-full font-bold transition-all duration-300 transform hover:scale-110 hover:brightness-125"
+                style="
+                  background: #39ff14;
+                  color: #000000;
+                  box-shadow: 0 0 25px #39ff14, 0 0 50px rgba(57, 255, 20, 0.6);
+                  border: 2px solid #39ff14;
+                "
+              >
+                💻 GitHub
+              </a>
+              <a
+                href="https://pinterest.com/clancypinkpunk"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="px-6 py-3 rounded-full font-bold transition-all duration-300 transform hover:scale-110 hover:brightness-125"
+                style="
+                  background: #ffff00;
+                  color: #000000;
+                  box-shadow: 0 0 25px #ffff00, 0 0 50px rgba(255, 255, 0, 0.6);
+                  border: 2px solid #ffff00;
+                "
+              >
+                📌 Pinterest
+              </a>
+            </div>
           </div>
         </div>
       </section>
       <!-- Footer -->
       <footer
         class="w-full py-8 px-4 text-center"
-        style="border-top: 2px solid #b413ec"
+        style="background: #160329; border-top: 3px solid #ff00ac"
       >
-        <p class="text-gray-400">
-          © 2024 Sugar Cult Studio - By Clancy Pink Punk. Todos los derechos
-          reservados.
+        <p style="color: #06bae7; font-weight: 600">
+          © 2024 Sugar Cult Studio - By Clancy Pink Punk 💜
+        </p>
+        <p style="color: #ffaa00; font-size: 0.9rem; margin-top: 0.5rem">
+          Stay iconic bestie! Todos los derechos reservados fr fr 🔥
         </p>
       </footer>
       <!-- Chatbot Button -->
@@ -841,16 +1362,11 @@
       <!-- Chatbot Window -->
       <div
         id="chatbot-window"
-        class="chatbot-container chatbot-hidden fixed bottom-28 right-8 w-96 rounded-2xl overflow-hidden z-50"
-        style="
-          background: rgba(26, 0, 51, 0.95);
-          border: 2px solid #b413ec;
-          box-shadow: 0 20px 60px rgba(180, 19, 236, 0.4);
-          max-height: 500px;
-        "
+        class="chatbot-container chatbot-hidden fixed bottom-24 md:bottom-28 right-4 md:right-8 w-[calc(100vw-2rem)] md:w-96 rounded-2xl overflow-hidden z-50"
+        style="background: rgba(26, 0, 51, 0.95); border: 2px solid #B413EC; box-shadow: 0 20px 60px rgba(180, 19, 236, 0.4); max-height: 70vh; md:max-height: 500px;"
       >
         <div
-          class="p-4"
+          class="p-3 md:p-4"
           style="
             background: linear-gradient(135deg, #ff69b4, #b413ec);
             color: white;
@@ -859,7 +1375,9 @@
           <div class="flex justify-between items-center">
             <div class="flex items-center space-x-2">
               <div class="w-3 h-3 rounded-full bg-[#AFFF4F]"></div>
-              <h3 class="font-bold">Asistente Sugar Cult</h3>
+              <h3 class="font-bold text-sm md:text-base">
+                Asistente Sugar Cult
+              </h3>
             </div>
             <button
               id="chatbot-close"
@@ -871,29 +1389,29 @@
         </div>
         <div
           id="chat-messages"
-          class="p-4 space-y-4 overflow-y-auto"
-          style="height: 350px; background: rgba(26, 0, 51, 0.9)"
+          class="p-3 md:p-4 space-y-3 md:space-y-4 overflow-y-auto"
+          style="height: calc(70vh - 180px); md:height: 350px; background: rgba(26, 0, 51, 0.9);"
         >
           <div class="chat-message flex items-start space-x-2">
             <div
-              class="w-8 h-8 rounded-full flex items-center justify-center text-sm"
+              class="w-7 h-7 md:w-8 md:h-8 rounded-full flex items-center justify-center text-xs md:text-sm flex-shrink-0"
               style="background: #ff69b4"
             >
               🤖
             </div>
             <div
-              class="flex-1 p-3 rounded-lg"
+              class="flex-1 p-2 md:p-3 rounded-lg"
               style="background: rgba(255, 105, 180, 0.2); color: white"
             >
-              <p id="chatbot-greeting-text">
-                ¡Hola! Soy el asistente de Sugar Cult Studio. ��En qué puedo
+              <p id="chatbot-greeting-text" class="text-sm md:text-base">
+                ¡Hola! Soy el asistente de Sugar Cult Studio. ¿En qu�� puedo
                 ayudarte hoy?
               </p>
             </div>
           </div>
         </div>
         <div
-          class="p-4"
+          class="p-3 md:p-4"
           style="
             background: rgba(26, 0, 51, 0.9);
             border-top: 1px solid #b413ec;
@@ -904,7 +1422,7 @@
               type="text"
               id="chat-input"
               placeholder="Escribe tu mensaje..."
-              class="flex-1 px-4 py-2 rounded-full"
+              class="flex-1 px-3 md:px-4 py-2 rounded-full text-sm md:text-base"
               style="
                 background: rgba(255, 255, 255, 0.1);
                 border: 1px solid #ff69b4;
@@ -914,42 +1432,42 @@
             />
             <button
               id="chat-send"
-              class="w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
+              class="w-9 h-9 md:w-10 md:h-10 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 flex-shrink-0"
               style="background: #ff69b4; color: white"
             >
               ➤
             </button>
           </div>
-          <div class="flex flex-wrap gap-2 mt-3">
+          <div class="flex flex-wrap gap-1.5 md:gap-2 mt-2 md:mt-3">
             <button
-              class="quick-reply px-3 py-1 rounded-full text-sm transition-all duration-300 hover:scale-105"
+              class="quick-reply px-2 md:px-3 py-1 rounded-full text-xs md:text-sm transition-all duration-300 hover:scale-105"
               style="
                 background: rgba(255, 105, 180, 0.3);
                 color: #ff69b4;
                 border: 1px solid #ff69b4;
               "
             >
-              📦 Ver las piezas
+              📦 Ver piezas
             </button>
             <button
-              class="quick-reply px-3 py-1 rounded-full text-sm transition-all duration-300 hover:scale-105"
+              class="quick-reply px-2 md:px-3 py-1 rounded-full text-xs md:text-sm transition-all duration-300 hover:scale-105"
               style="
                 background: rgba(180, 19, 236, 0.3);
                 color: #b413ec;
                 border: 1px solid #b413ec;
               "
             >
-              💰 Cuánto sale?
+              💰 Precios
             </button>
             <button
-              class="quick-reply px-3 py-1 rounded-full text-sm transition-all duration-300 hover:scale-105"
+              class="quick-reply px-2 md:px-3 py-1 rounded-full text-xs md:text-sm transition-all duration-300 hover:scale-105"
               style="
                 background: rgba(255, 51, 102, 0.3);
                 color: #ff3366;
                 border: 1px solid #ff3366;
               "
             >
-              🎨 Quiero custom
+              🎨 Custom
             </button>
           </div>
         </div>
@@ -971,7 +1489,6 @@
         about_title: "Sobre Nosotros",
         about_text:
           "Sugar Cult Studio nace de la visión de Clancy Pink Punk: crear esculturas que desafían los límites entre lo digital y lo físico, combinando la precisión de la tecnología con la calidez del arte hecho a mano.",
-        shop_title: "Nuestra Tienda",
         contact_title: "Contáctanos",
         chatbot_greeting:
           "¡Hola! Soy el asistente de Sugar Cult Studio. ¿En qué puedo ayudarte hoy?",
@@ -1057,14 +1574,6 @@
                 config.about_text || defaultConfig.about_text;
               aboutText.style.fontFamily = `${customFont}, ${baseFontStack}`;
               aboutText.style.fontSize = `${baseSize * 1.125}px`;
-            }
-
-            const shopTitle = document.getElementById("shop-title");
-            if (shopTitle) {
-              shopTitle.textContent =
-                config.shop_title || defaultConfig.shop_title;
-              shopTitle.style.fontFamily = `${customFont}, ${baseFontStack}`;
-              shopTitle.style.fontSize = `${baseSize * 2.5}px`;
             }
 
             const contactTitle = document.getElementById("contact-title");
@@ -1160,7 +1669,6 @@
               ["cta_button", config.cta_button || defaultConfig.cta_button],
               ["about_title", config.about_title || defaultConfig.about_title],
               ["about_text", config.about_text || defaultConfig.about_text],
-              ["shop_title", config.shop_title || defaultConfig.shop_title],
               [
                 "contact_title",
                 config.contact_title || defaultConfig.contact_title,
@@ -1172,6 +1680,80 @@
             ]),
         });
       }
+
+      // Sculptures Carousel
+      const sculpturesCarousel = document.getElementById("sculptures-carousel");
+      const sculpturesPrev = document.getElementById("sculptures-prev");
+      const sculpturesNext = document.getElementById("sculptures-next");
+      const sculpturesIndicators = document.getElementById(
+        "sculptures-indicators"
+      );
+      let sculpturesCurrentIndex = 0;
+      const sculpturesTotal = 12;
+      let sculpturesAutoPlay;
+
+      // Create indicators
+      for (let i = 0; i < sculpturesTotal; i++) {
+        const indicator = document.createElement("div");
+        indicator.className =
+          "w-2 h-2 rounded-full cursor-pointer transition-all duration-300";
+        indicator.style.background =
+          i === 0 ? "#ff00ac" : "rgba(255, 255, 255, 0.3)";
+        indicator.addEventListener("click", () => goToSculptureSlide(i));
+        sculpturesIndicators.appendChild(indicator);
+      }
+
+      function updateSculpturesCarousel() {
+        sculpturesCarousel.style.transform = `translateX(-${
+          sculpturesCurrentIndex * 100
+        }%)`;
+
+        // Update indicators
+        const indicators = sculpturesIndicators.children;
+        for (let i = 0; i < indicators.length; i++) {
+          indicators[i].style.background =
+            i === sculpturesCurrentIndex
+              ? "#ff00ac"
+              : "rgba(255, 255, 255, 0.3)";
+        }
+      }
+
+      function nextSculptureSlide() {
+        sculpturesCurrentIndex = (sculpturesCurrentIndex + 1) % sculpturesTotal;
+        updateSculpturesCarousel();
+      }
+
+      function prevSculptureSlide() {
+        sculpturesCurrentIndex =
+          (sculpturesCurrentIndex - 1 + sculpturesTotal) % sculpturesTotal;
+        updateSculpturesCarousel();
+      }
+
+      function goToSculptureSlide(index) {
+        sculpturesCurrentIndex = index;
+        updateSculpturesCarousel();
+      }
+
+      sculpturesNext.addEventListener("click", () => {
+        nextSculptureSlide();
+        resetSculpturesAutoPlay();
+      });
+
+      sculpturesPrev.addEventListener("click", () => {
+        prevSculptureSlide();
+        resetSculpturesAutoPlay();
+      });
+
+      function startSculpturesAutoPlay() {
+        sculpturesAutoPlay = setInterval(nextSculptureSlide, 4000);
+      }
+
+      function resetSculpturesAutoPlay() {
+        clearInterval(sculpturesAutoPlay);
+        startSculpturesAutoPlay();
+      }
+
+      startSculpturesAutoPlay();
 
       // Chatbot functionality
       const chatbotToggle = document.getElementById("chatbot-toggle");
@@ -1202,17 +1784,17 @@
 
         if (isBot) {
           messageDiv.innerHTML = `
-          <div class="w-8 h-8 rounded-full flex items-center justify-center text-sm" style="background: #FF69B4;">🤖</div>
-          <div class="flex-1 p-3 rounded-lg" style="background: rgba(255, 105, 180, 0.2); color: white;">
-            <p>${text}</p>
+          <div class="w-7 h-7 md:w-8 md:h-8 rounded-full flex items-center justify-center text-xs md:text-sm flex-shrink-0" style="background: #ff00ac;">🤖</div>
+          <div class="flex-1 p-2 md:p-3 rounded-lg" style="background: rgba(255, 0, 172, 0.2); color: white;">
+            <p class="text-sm md:text-base">${text}</p>
           </div>
         `;
         } else {
           messageDiv.innerHTML = `
-          <div class="flex-1 p-3 rounded-lg text-right" style="background: rgba(180, 19, 236, 0.2); color: white;">
-            <p>${text}</p>
+          <div class="flex-1 p-2 md:p-3 rounded-lg text-right" style="background: rgba(114, 0, 166, 0.2); color: white;">
+            <p class="text-sm md:text-base">${text}</p>
           </div>
-          <div class="w-8 h-8 rounded-full flex items-center justify-center text-sm" style="background: #B413EC;">👤</div>
+          <div class="w-7 h-7 md:w-8 md:h-8 rounded-full flex items-center justify-center text-xs md:text-sm flex-shrink-0" style="background: #7200A6;">👤</div>
         `;
         }
 
@@ -1220,35 +1802,114 @@
         chatMessages.scrollTop = chatMessages.scrollHeight;
       }
 
+      function showTypingIndicator() {
+        const typingDiv = document.createElement("div");
+        typingDiv.id = "typing-indicator";
+        typingDiv.className = "chat-message flex items-start space-x-2";
+        typingDiv.innerHTML = `
+        <div class="w-7 h-7 md:w-8 md:h-8 rounded-full flex items-center justify-center text-xs md:text-sm flex-shrink-0" style="background: #ff00ac;">����</div>
+        <div class="flex-1 p-2 md:p-3 rounded-lg" style="background: rgba(255, 0, 172, 0.2); color: white;">
+          <p class="text-sm md:text-base">
+            <span class="inline-block animate-pulse">●</span>
+            <span class="inline-block animate-pulse" style="animation-delay: 0.2s;">●</span>
+            <span class="inline-block animate-pulse" style="animation-delay: 0.4s;">●</span>
+          </p>
+        </div>
+      `;
+        chatMessages.appendChild(typingDiv);
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+      }
+
+      function removeTypingIndicator() {
+        const typingIndicator = document.getElementById("typing-indicator");
+        if (typingIndicator) {
+          typingIndicator.remove();
+        }
+      }
+
       function getBotResponse(userMessage) {
         const message = userMessage.toLowerCase();
 
-        if (message.includes("producto") || message.includes("ver")) {
-          return 'Bestie tenemos 6 esculturas que slayean! 💅 Desde la "Escultura Prisma" hasta la "Estrella Pop". Todo es 3D print + cerámica. ¿Quieres el tea sobre alguna? Spill! 🎨';
+        if (
+          message.includes("producto") ||
+          message.includes("ver") ||
+          message.includes("piezas") ||
+          message.includes("pieza")
+        ) {
+          return 'Bestie tenemos esculturas súper fire! 💜 Todas hechas con 3D print + cerámica. Scroll arriba en "Nuestras Esculturas" para verlas todas, o checa la Galería. ¿Te late alguna en espec��fico? 🎨✨';
         } else if (
           message.includes("precio") ||
           message.includes("costo") ||
-          message.includes("cuanto")
+          message.includes("cuanto") ||
+          message.includes("cuánto") ||
+          message.includes("sale")
         ) {
-          return "Los precios van desde $129 hasta $199, dependiendo del vibe de cada pieza. Calidad premium, no cap. Material top tier fr fr. 💰✨";
+          return "Los precios varían dependiendo de cada pieza bestie! 💰 Trabajamos con Comercio Justo. Mándanos WhatsApp al 56 1067 7516 o email a clancypinkpunk@gmail.com para cotizar la escultura que te guste! No cap, te respondemos rápido! 💅";
         } else if (
           message.includes("personalizar") ||
           message.includes("custom") ||
-          message.includes("diseño")
+          message.includes("diseño") ||
+          message.includes("pedido")
         ) {
-          return "Yaaas! 🙌 Hacemos piezas custom que van a comer y no van a dejar migajas. Cuéntame tu idea y la hacemos realidad. Proyectos custom desde $250. It's giving main character vibes! 🎨💜";
-        } else if (message.includes("envio") || message.includes("entrega")) {
-          return "Enviamos a toda España y Europa bestie! 📦 Llega en 5-7 días. Todo viene súper protegido, no te preocupes. We got you! 💪";
+          return "Yaaas! �� Hacemos piezas custom que van a slayear! Cuéntanos tu idea por WhatsApp (56 1067 7516) o email (clancypinkpunk@gmail.com) y la hacemos realidad con 3D print + cerámica. It's giving main character vibes! 🎨💜";
+        } else if (
+          message.includes("envio") ||
+          message.includes("envío") ||
+          message.includes("entrega")
+        ) {
+          return "La entrega es en bici 🚴‍♀️ a domicilio en CDMX o nos vemos en punto medio en el metro! Super eco-friendly y personal bestie. Ubicación: San Pedro de los Pinos. 💚✨";
+        } else if (
+          message.includes("pago") ||
+          message.includes("forma") ||
+          message.includes("transferencia")
+        ) {
+          return "Aceptamos efectivo o transferencia por NU bestie! 💳 Tengo CLABE interbancaria disponible. Todo bien f��cil y seguro. Hit me up para los detalles! 💅";
+        } else if (
+          message.includes("clancy") ||
+          message.includes("artista") ||
+          message.includes("quien")
+        ) {
+          return "Clancy Pink Punk es une artista visual neurodivergente increíble! ✨ No binarie (elle/they), es fundadore de Delulu Future Dev y se especializa en estrategia creativa, diseño digital, performance, moda y por supuesto, esculturas! Multitalentose y auténtique AF! 💜🌈";
+        } else if (
+          message.includes("manifiesto") ||
+          message.includes("cult") ||
+          message.includes("filosofia") ||
+          message.includes("filosofía") ||
+          message.includes("vibe")
+        ) {
+          return "🍭✨ El Manifiesto Sugar Cult es TODO bestie! We don't just make art, we drop pieces que slayen duro. Es 3D print meets craft OG, glossy meets gritty. No mass production, solo statement pieces! Scroll arriba a la sección Manifiesto para leerlo completo. We're for the cult! 💜💅";
         } else if (
           message.includes("hola") ||
           message.includes("hello") ||
-          message.includes("hi")
+          message.includes("hi") ||
+          message.includes("hey")
         ) {
-          return "Yoo! 💜 What's good bestie? ¿Te late alguna de nuestras esculturas o prefieres algo custom? I'm here for it! 😊✨";
-        } else if (message.includes("gracias")) {
-          return "De nada bestie! 💅 Si tienes más preguntas, aquí estoy. También nos puedes textear por Insta o email. Stay iconic! ✨💜";
+          return "Yoo! 💜 What's good bestie? ¿Te late alguna de nuestras esculturas o prefieres algo custom? Estoy aquí para ayudarte! 😊✨";
+        } else if (message.includes("gracias") || message.includes("thanks")) {
+          return "De nada bestie! 💅 Si tienes más preguntas, aquí estoy. También nos puedes textear por WhatsApp (56 1067 7516) o síguenos en Insta! Stay iconic! ✨💜";
+        } else if (
+          message.includes("ubicacion") ||
+          message.includes("ubicación") ||
+          message.includes("donde") ||
+          message.includes("dónde") ||
+          message.includes("direccion")
+        ) {
+          return "Estamos en Toltecas 166, San Pedro de los Pinos, CDMX 01180! 📍 Te podemos llevar tu pieza en bici o nos vemos en el metro en un punto medio. Super convenient bestie! 🚴‍♀️✨";
+        } else if (
+          message.includes("horario") ||
+          message.includes("cuando") ||
+          message.includes("cita")
+        ) {
+          return "Para coordinar citas y horarios, mejor escríbenos por WhatsApp al 56 1067 7516 o email a clancypinkpunk@gmail.com! Así arreglamos todo bien smooth bestie! 📅💜";
+        } else if (
+          message.includes("instagram") ||
+          message.includes("insta") ||
+          message.includes("redes") ||
+          message.includes("social")
+        ) {
+          return "Síguenos en nuestras redes bestie! 📱 Instagram: @clancypinkpunk | TikTok: @clancypinkpunk | También estamos en GitHub y Pinterest! Encuentra todos los links en la sección de Contacto abajo! 💜✨";
         } else {
-          return "Oop, no entendí eso bestie! 😅 Para más info específica, mejor textéanos por Insta o email. We'll get back to you ASAP! 💬✨";
+          return "Oop, no entendí eso bestie! 😅 Pero puedo ayudarte con: precios 💰, ver piezas 🎨, pedidos custom ✨, envíos 🚴‍♀️, pagos 💳, info sobre Clancy, o el Manifiesto 🍭! También escríbenos al 56 1067 7516! 💬";
         }
       }
 
@@ -1258,10 +1919,17 @@
           addMessage(message, false);
           chatInput.value = "";
 
+          // Show typing indicator
+          showTypingIndicator();
+
+          // Simulate realistic typing delay (1-2 seconds)
+          const typingDelay = 1000 + Math.random() * 1000;
+
           setTimeout(() => {
+            removeTypingIndicator();
             const response = getBotResponse(message);
             addMessage(response, true);
-          }, 1000);
+          }, typingDelay);
         }
       });
 
@@ -1276,20 +1944,17 @@
           const message = button.textContent.trim();
           addMessage(message, false);
 
+          // Show typing indicator
+          showTypingIndicator();
+
+          // Simulate realistic typing delay
+          const typingDelay = 800 + Math.random() * 800;
+
           setTimeout(() => {
-            let response = "";
-            if (message.includes("piezas")) {
-              response =
-                'Bestie tenemos 6 esculturas que slayean! 💅 Desde la "Escultura Prisma" hasta la "Estrella Pop". Todo es 3D print + cerámica. Scroll para arriba y vas a verlas todas! 🎨✨';
-            } else if (message.includes("sale")) {
-              response =
-                'Los precios van desde $129 hasta $199 bestie! La "Escultura Prisma" $149, "Órbita Celestial" $199, "Cristal Digital" $179, "Flor Neon" $169, "Cubo Feliz" $129, y "Estrella Pop" $159. Todo premium, no cap! 💰💅';
-            } else if (message.includes("custom")) {
-              response =
-                "Yaaas! 🙌 Hacemos diseños custom que van a slayear! Cuéntanos tu idea y la hacemos realidad con 3D print + cerámica. Proyectos desde $250. Contáctanos por Insta o email para empezar! It's giving iconic! 🎨💜✨";
-            }
+            removeTypingIndicator();
+            const response = getBotResponse(message);
             addMessage(response, true);
-          }, 1000);
+          }, typingDelay);
         });
       });
 
@@ -1304,25 +1969,149 @@
         });
       });
 
-      // Add to cart simulation
-      document.querySelectorAll(".add-to-cart").forEach((button) => {
-        button.addEventListener("click", function () {
-          const originalText = this.textContent;
-          this.textContent = "✓ Added bestie!";
-          this.style.opacity = "0.7";
+      // CTA button scroll to sculptures
+      document.getElementById("cta-button").addEventListener("click", () => {
+        document
+          .getElementById("esculturas")
+          .scrollIntoView({ behavior: "smooth", block: "start" });
+      });
 
-          setTimeout(() => {
-            this.textContent = originalText;
-            this.style.opacity = "1";
-          }, 2000);
+      // Galactic Queer modal functionality
+      const galacticItems = document.querySelectorAll(".galactic-item");
+      const galacticModal = document.getElementById("galactic-modal");
+      const galacticModalImage = document.getElementById(
+        "galactic-modal-image"
+      );
+      const galacticModalClose = document.getElementById(
+        "galactic-modal-close"
+      );
+      const galacticModalPrev = document.getElementById("galactic-modal-prev");
+      const galacticModalNext = document.getElementById("galactic-modal-next");
+
+      const galacticImages = [
+        "https://raw.githubusercontent.com/Frontendcreator2025/sugarcultstudio-clancypinkpunk/refs/heads/main/QUEER%20GALACTIC%20(5).jpg",
+        "https://raw.githubusercontent.com/Frontendcreator2025/sugarcultstudio-clancypinkpunk/refs/heads/main/QUEER%20GALACTIC%20(1).jpg",
+        "https://raw.githubusercontent.com/Frontendcreator2025/sugarcultstudio-clancypinkpunk/refs/heads/main/QUEER%20GALACTIC%20(2).jpg",
+        "https://raw.githubusercontent.com/Frontendcreator2025/sugarcultstudio-clancypinkpunk/refs/heads/main/QUEER%20GALACTIC%20(3).jpg",
+        "https://raw.githubusercontent.com/Frontendcreator2025/sugarcultstudio-clancypinkpunk/refs/heads/main/QUEER%20GALACTIC%20(4).jpg",
+      ];
+
+      let currentGalacticIndex = 0;
+
+      function openGalacticModal(index) {
+        currentGalacticIndex = index;
+        galacticModalImage.src = galacticImages[index];
+        galacticModal.style.display = "flex";
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeGalacticModal() {
+        galacticModal.style.display = "none";
+        document.body.style.overflow = "auto";
+      }
+
+      function showPrevGalacticImage() {
+        currentGalacticIndex =
+          (currentGalacticIndex - 1 + galacticImages.length) %
+          galacticImages.length;
+        galacticModalImage.src = galacticImages[currentGalacticIndex];
+      }
+
+      function showNextGalacticImage() {
+        currentGalacticIndex =
+          (currentGalacticIndex + 1) % galacticImages.length;
+        galacticModalImage.src = galacticImages[currentGalacticIndex];
+      }
+
+      galacticItems.forEach((item) => {
+        item.addEventListener("click", () => {
+          const index = parseInt(item.dataset.galacticIndex);
+          openGalacticModal(index);
         });
       });
 
-      // CTA button scroll to shop
-      document.getElementById("cta-button").addEventListener("click", () => {
-        document
-          .getElementById("tienda")
-          .scrollIntoView({ behavior: "smooth", block: "start" });
+      galacticModalClose.addEventListener("click", closeGalacticModal);
+      galacticModalPrev.addEventListener("click", showPrevGalacticImage);
+      galacticModalNext.addEventListener("click", showNextGalacticImage);
+
+      galacticModal.addEventListener("click", (e) => {
+        if (e.target === galacticModal) {
+          closeGalacticModal();
+        }
+      });
+
+      // Gallery modal functionality
+      const galleryItems = document.querySelectorAll(".gallery-item");
+      const galleryModal = document.getElementById("gallery-modal");
+      const modalImage = document.getElementById("modal-image");
+      const modalClose = document.getElementById("modal-close");
+      const modalPrev = document.getElementById("modal-prev");
+      const modalNext = document.getElementById("modal-next");
+
+      const galleryImages = [
+        "https://raw.githubusercontent.com/Frontendcreator2025/sugarcultstudio-clancypinkpunk/refs/heads/main/META72.jpg",
+        "https://raw.githubusercontent.com/Frontendcreator2025/sugarcultstudio-clancypinkpunk/refs/heads/main/META75.jpg",
+        "https://raw.githubusercontent.com/Frontendcreator2025/sugarcultstudio-clancypinkpunk/refs/heads/main/META77.jpg",
+        "https://raw.githubusercontent.com/Frontendcreator2025/sugarcultstudio-clancypinkpunk/refs/heads/main/META76.jpg",
+        "https://raw.githubusercontent.com/Frontendcreator2025/sugarcultstudio-clancypinkpunk/refs/heads/main/META74.jpg",
+        "https://raw.githubusercontent.com/Frontendcreator2025/sugarcultstudio-clancypinkpunk/refs/heads/main/META78.jpg",
+        "https://raw.githubusercontent.com/Frontendcreator2025/sugarcultstudio-clancypinkpunk/refs/heads/main/META79.jpg",
+        "https://raw.githubusercontent.com/Frontendcreator2025/sugarcultstudio-clancypinkpunk/refs/heads/main/META73.jpg",
+      ];
+
+      let currentImageIndex = 0;
+
+      function openModal(index) {
+        currentImageIndex = index;
+        modalImage.src = galleryImages[index];
+        galleryModal.style.display = "flex";
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeModal() {
+        galleryModal.style.display = "none";
+        document.body.style.overflow = "auto";
+      }
+
+      function showPrevImage() {
+        currentImageIndex =
+          (currentImageIndex - 1 + galleryImages.length) % galleryImages.length;
+        modalImage.src = galleryImages[currentImageIndex];
+      }
+
+      function showNextImage() {
+        currentImageIndex = (currentImageIndex + 1) % galleryImages.length;
+        modalImage.src = galleryImages[currentImageIndex];
+      }
+
+      galleryItems.forEach((item) => {
+        item.addEventListener("click", () => {
+          const index = parseInt(item.dataset.index);
+          openModal(index);
+        });
+      });
+
+      modalClose.addEventListener("click", closeModal);
+      modalPrev.addEventListener("click", showPrevImage);
+      modalNext.addEventListener("click", showNextImage);
+
+      galleryModal.addEventListener("click", (e) => {
+        if (e.target === galleryModal) {
+          closeModal();
+        }
+      });
+
+      document.addEventListener("keydown", (e) => {
+        if (galleryModal.style.display === "flex") {
+          if (e.key === "Escape") closeModal();
+          if (e.key === "ArrowLeft") showPrevImage();
+          if (e.key === "ArrowRight") showNextImage();
+        }
+        if (galacticModal.style.display === "flex") {
+          if (e.key === "Escape") closeGalacticModal();
+          if (e.key === "ArrowLeft") showPrevGalacticImage();
+          if (e.key === "ArrowRight") showNextGalacticImage();
+        }
       });
     </script>
     <script>
@@ -1332,7 +2121,7 @@
           if (b) {
             var d = b.createElement("script");
             d.innerHTML =
-              "window.__CF$cv$params={r:'9b44f650a48beef2',t:'MTc2Njc5ODA3Ny4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";
+              "window.__CF$cv$params={r:'9b461ced4774eef2',t:'MTc2NjgxMDE0NS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";
             b.getElementsByTagName("head")[0].appendChild(d);
           }
         }

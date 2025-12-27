@@ -1,0 +1,1364 @@
+<!DOCTYPE html>
+<html lang="es" class="h-full">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sugar Cult Studio - By Clancy Pink Punk</title>
+    <script src="/_sdk/element_sdk.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        box-sizing: border-box;
+      }
+
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-20px);
+        }
+      }
+
+      @keyframes pulse-glow {
+        0%,
+        100% {
+          filter: drop-shadow(0 0 10px currentColor);
+        }
+        50% {
+          filter: drop-shadow(0 0 20px currentColor);
+        }
+      }
+
+      @keyframes slide-up {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .float-animation {
+        animation: float 3s ease-in-out infinite;
+      }
+
+      .pulse-glow {
+        animation: pulse-glow 2s ease-in-out infinite;
+      }
+
+      .slide-up {
+        animation: slide-up 0.6s ease-out forwards;
+      }
+
+      .gradient-text {
+        background: linear-gradient(135deg, #ff69b4, #b413ec, #ff3366);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .product-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .product-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(180, 19, 236, 0.3);
+      }
+
+      .chat-message {
+        animation: slide-up 0.4s ease-out;
+      }
+
+      .chatbot-container {
+        transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      }
+
+      .chatbot-hidden {
+        transform: scale(0) translateY(100px);
+        opacity: 0;
+      }
+
+      .chatbot-visible {
+        transform: scale(1) translateY(0);
+        opacity: 1;
+      }
+    </style>
+    <style>
+      @view-transition {
+        navigation: auto;
+      }
+    </style>
+    <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+  </head>
+  <body class="h-full w-full overflow-auto">
+    <div
+      id="app-wrapper"
+      class="min-h-full w-full"
+      style="
+        background: linear-gradient(
+          135deg,
+          #1a0033 0%,
+          #330066 50%,
+          #1a0033 100%
+        );
+      "
+    >
+      <!-- Navigation -->
+      <nav
+        class="w-full fixed top-0 z-50 backdrop-blur-md"
+        style="
+          background: rgba(26, 0, 51, 0.9);
+          border-bottom: 2px solid #b413ec;
+        "
+      >
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex justify-between items-center h-20">
+            <div class="flex items-center space-x-3">
+              <svg
+                class="w-12 h-12 pulse-glow"
+                style="color: #ff69b4"
+                viewbox="0 0 100 100"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M50 10 L70 30 L70 50 L90 70 L70 70 L50 90 L30 70 L10 70 L30 50 L30 30 Z"
+                  fill="currentColor"
+                />
+                <circle cx="50" cy="45" r="15" fill="#B413EC" />
+              </svg>
+              <div>
+                <h1
+                  id="brand-name"
+                  class="text-2xl font-bold"
+                  style="color: #ff69b4"
+                >
+                  Sugar Cult Studio
+                </h1>
+                <p id="brand-subtitle" class="text-sm" style="color: #00cfff">
+                  By Clancy Pink Punk
+                </p>
+              </div>
+            </div>
+            <div class="hidden md:flex space-x-8">
+              <a
+                href="#inicio"
+                class="text-white hover:text-[#FF69B4] transition-colors font-medium"
+                >Inicio</a
+              >
+              <a
+                href="#nosotros"
+                class="text-white hover:text-[#B413EC] transition-colors font-medium"
+                >Nosotros</a
+              >
+              <a
+                href="#tienda"
+                class="text-white hover:text-[#FF3366] transition-colors font-medium"
+                >Tienda</a
+              >
+              <a
+                href="#contacto"
+                class="text-white hover:text-[#FFEB3B] transition-colors font-medium"
+                >Contacto</a
+              >
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- Hero Section -->
+      <section id="inicio" class="w-full pt-32 pb-20 px-4">
+        <div class="max-w-7xl mx-auto">
+          <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6 slide-up">
+              <h2
+                id="hero-title"
+                class="text-5xl md:text-7xl font-bold gradient-text"
+              >
+                Arte Digital que Cobra Vida
+              </h2>
+              <p id="hero-subtitle" class="text-xl md:text-2xl text-gray-300">
+                Esculturas únicas creadas con impresión 3D y cerámica. Donde la
+                tecnología se encuentra con el arte tradicional.
+              </p>
+              <button
+                id="cta-button"
+                class="px-8 py-4 text-lg font-bold rounded-full transition-all duration-300 transform hover:scale-105"
+                style="
+                  background: linear-gradient(135deg, #ff69b4, #b413ec);
+                  color: white;
+                  box-shadow: 0 10px 30px rgba(255, 105, 180, 0.4);
+                "
+              >
+                Explorar Colección
+              </button>
+            </div>
+            <div class="relative float-animation">
+              <svg
+                class="w-full h-auto"
+                viewbox="0 0 400 400"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <defs>
+                  <lineargradient
+                    id="grad1"
+                    x1="0%"
+                    y1="0%"
+                    x2="100%"
+                    y2="100%"
+                  >
+                    <stop
+                      offset="0%"
+                      style="stop-color: #ff69b4; stop-opacity: 1"
+                    />
+                    <stop
+                      offset="50%"
+                      style="stop-color: #b413ec; stop-opacity: 1"
+                    />
+                    <stop
+                      offset="100%"
+                      style="stop-color: #ff3366; stop-opacity: 1"
+                    />
+                  </lineargradient>
+                  <lineargradient
+                    id="grad2"
+                    x1="0%"
+                    y1="0%"
+                    x2="100%"
+                    y2="100%"
+                  >
+                    <stop
+                      offset="0%"
+                      style="stop-color: #ffeb3b; stop-opacity: 1"
+                    />
+                    <stop
+                      offset="100%"
+                      style="stop-color: #00cfff; stop-opacity: 1"
+                    />
+                  </lineargradient>
+                </defs>
+                <ellipse
+                  cx="200"
+                  cy="300"
+                  rx="150"
+                  ry="30"
+                  fill="url(#grad1)"
+                  opacity="0.3"
+                />
+                <path
+                  d="M200 100 Q250 150 200 200 Q150 150 200 100"
+                  fill="url(#grad1)"
+                />
+                <path
+                  d="M200 200 Q230 230 200 280 Q170 230 200 200"
+                  fill="url(#grad2)"
+                />
+                <circle cx="200" cy="150" r="40" fill="#AFFF4F" opacity="0.8" />
+                <rect
+                  x="180"
+                  y="280"
+                  width="40"
+                  height="20"
+                  fill="url(#grad1)"
+                  rx="5"
+                />
+                <path
+                  d="M150 250 L200 280 L250 250"
+                  stroke="#00CFFF"
+                  stroke-width="3"
+                  fill="none"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- About Section -->
+      <section
+        id="nosotros"
+        class="w-full py-20 px-4"
+        style="background: rgba(180, 19, 236, 0.1)"
+      >
+        <div class="max-w-7xl mx-auto">
+          <h2
+            id="about-title"
+            class="text-4xl md:text-5xl font-bold text-center mb-12 gradient-text"
+          >
+            Sobre Nosotros
+          </h2>
+          <div class="grid md:grid-cols-3 gap-8">
+            <div
+              class="text-center p-8 rounded-2xl"
+              style="
+                background: rgba(255, 105, 180, 0.1);
+                border: 2px solid #ff69b4;
+              "
+            >
+              <div class="text-6xl mb-4">🎨</div>
+              <h3 class="text-2xl font-bold mb-3" style="color: #ff69b4">
+                Diseño Único
+              </h3>
+              <p class="text-gray-300">
+                Cada pieza es una obra de arte original diseñada con pasión y
+                creatividad.
+              </p>
+            </div>
+            <div
+              class="text-center p-8 rounded-2xl"
+              style="
+                background: rgba(180, 19, 236, 0.1);
+                border: 2px solid #b413ec;
+              "
+            >
+              <div class="text-6xl mb-4">🖨️</div>
+              <h3 class="text-2xl font-bold mb-3" style="color: #b413ec">
+                Tecnología 3D
+              </h3>
+              <p class="text-gray-300">
+                Utilizamos impresión 3D de última generación para dar vida a
+                cada diseño.
+              </p>
+            </div>
+            <div
+              class="text-center p-8 rounded-2xl"
+              style="
+                background: rgba(255, 51, 102, 0.1);
+                border: 2px solid #ff3366;
+              "
+            >
+              <div class="text-6xl mb-4">🏺</div>
+              <h3 class="text-2xl font-bold mb-3" style="color: #ff3366">
+                Arte Cerámico
+              </h3>
+              <p class="text-gray-300">
+                Fusionamos técnicas tradicionales de cerámica con innovación
+                digital.
+              </p>
+            </div>
+          </div>
+          <p
+            id="about-text"
+            class="text-center text-xl text-gray-300 mt-12 max-w-3xl mx-auto"
+          >
+            Sugar Cult Studio nace de la visión de Clancy Pink Punk: crear
+            esculturas que desafían los límites entre lo digital y lo físico,
+            combinando la precisión de la tecnología con la calidez del arte
+            hecho a mano.
+          </p>
+        </div>
+      </section>
+      <!-- Shop Section -->
+      <section id="tienda" class="w-full py-20 px-4">
+        <div class="max-w-7xl mx-auto">
+          <h2
+            id="shop-title"
+            class="text-4xl md:text-5xl font-bold text-center mb-12 gradient-text"
+          >
+            Nuestra Tienda
+          </h2>
+          <div class="grid md:grid-cols-3 gap-8">
+            <!-- Product 1 -->
+            <div
+              class="product-card rounded-2xl overflow-hidden"
+              style="
+                background: rgba(255, 105, 180, 0.1);
+                border: 2px solid #ff69b4;
+              "
+            >
+              <div
+                class="p-6"
+                style="
+                  background: linear-gradient(
+                    135deg,
+                    rgba(255, 105, 180, 0.2),
+                    rgba(180, 19, 236, 0.2)
+                  );
+                "
+              >
+                <svg
+                  class="w-full h-48"
+                  viewbox="0 0 200 200"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <ellipse
+                    cx="100"
+                    cy="160"
+                    rx="60"
+                    ry="15"
+                    fill="#FF69B4"
+                    opacity="0.3"
+                  />
+                  <path d="M100 50 L120 80 L100 110 L80 80 Z" fill="#FF69B4" />
+                  <circle cx="100" cy="90" r="25" fill="#B413EC" />
+                  <rect
+                    x="90"
+                    y="110"
+                    width="20"
+                    height="50"
+                    fill="#FF3366"
+                    rx="3"
+                  />
+                </svg>
+              </div>
+              <div class="p-6">
+                <h3 class="text-2xl font-bold mb-2" style="color: #ff69b4">
+                  Escultura Prisma
+                </h3>
+                <p class="text-gray-300 mb-4">
+                  Pieza geométrica en cerámica con acabado metálico
+                </p>
+                <div class="flex justify-between items-center">
+                  <span class="text-2xl font-bold" style="color: #ffeb3b"
+                    >$149</span
+                  >
+                  <button
+                    class="add-to-cart px-6 py-2 rounded-full font-bold transition-all duration-300 hover:scale-105"
+                    style="background: #ff69b4; color: white"
+                  >
+                    Agregar
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Product 2 -->
+            <div
+              class="product-card rounded-2xl overflow-hidden"
+              style="
+                background: rgba(180, 19, 236, 0.1);
+                border: 2px solid #b413ec;
+              "
+            >
+              <div
+                class="p-6"
+                style="
+                  background: linear-gradient(
+                    135deg,
+                    rgba(180, 19, 236, 0.2),
+                    rgba(255, 51, 102, 0.2)
+                  );
+                "
+              >
+                <svg
+                  class="w-full h-48"
+                  viewbox="0 0 200 200"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <ellipse
+                    cx="100"
+                    cy="160"
+                    rx="60"
+                    ry="15"
+                    fill="#B413EC"
+                    opacity="0.3"
+                  />
+                  <circle cx="100" cy="80" r="40" fill="#B413EC" />
+                  <circle cx="100" cy="80" r="25" fill="#FF3366" />
+                  <circle cx="100" cy="80" r="15" fill="#FFEB3B" />
+                  <rect
+                    x="85"
+                    y="120"
+                    width="30"
+                    height="40"
+                    fill="#00CFFF"
+                    rx="5"
+                  />
+                </svg>
+              </div>
+              <div class="p-6">
+                <h3 class="text-2xl font-bold mb-2" style="color: #b413ec">
+                  Órbita Celestial
+                </h3>
+                <p class="text-gray-300 mb-4">
+                  Escultura circular impresa en 3D con colores vibrantes
+                </p>
+                <div class="flex justify-between items-center">
+                  <span class="text-2xl font-bold" style="color: #ffeb3b"
+                    >$199</span
+                  >
+                  <button
+                    class="add-to-cart px-6 py-2 rounded-full font-bold transition-all duration-300 hover:scale-105"
+                    style="background: #b413ec; color: white"
+                  >
+                    Agregar
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Product 3 -->
+            <div
+              class="product-card rounded-2xl overflow-hidden"
+              style="
+                background: rgba(255, 51, 102, 0.1);
+                border: 2px solid #ff3366;
+              "
+            >
+              <div
+                class="p-6"
+                style="
+                  background: linear-gradient(
+                    135deg,
+                    rgba(255, 51, 102, 0.2),
+                    rgba(0, 207, 255, 0.2)
+                  );
+                "
+              >
+                <svg
+                  class="w-full h-48"
+                  viewbox="0 0 200 200"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <ellipse
+                    cx="100"
+                    cy="160"
+                    rx="60"
+                    ry="15"
+                    fill="#FF3366"
+                    opacity="0.3"
+                  />
+                  <path
+                    d="M100 60 L130 100 L100 140 L70 100 Z"
+                    fill="#FF3366"
+                  />
+                  <path
+                    d="M100 80 L115 100 L100 120 L85 100 Z"
+                    fill="#00CFFF"
+                  />
+                  <rect
+                    x="95"
+                    y="140"
+                    width="10"
+                    height="20"
+                    fill="#AFFF4F"
+                    rx="2"
+                  />
+                </svg>
+              </div>
+              <div class="p-6">
+                <h3 class="text-2xl font-bold mb-2" style="color: #ff3366">
+                  Cristal Digital
+                </h3>
+                <p class="text-gray-300 mb-4">
+                  Forma diamantada en cerámica translúcida
+                </p>
+                <div class="flex justify-between items-center">
+                  <span class="text-2xl font-bold" style="color: #ffeb3b"
+                    >$179</span
+                  >
+                  <button
+                    class="add-to-cart px-6 py-2 rounded-full font-bold transition-all duration-300 hover:scale-105"
+                    style="background: #ff3366; color: white"
+                  >
+                    Agregar
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Product 4 -->
+            <div
+              class="product-card rounded-2xl overflow-hidden"
+              style="
+                background: rgba(0, 207, 255, 0.1);
+                border: 2px solid #00cfff;
+              "
+            >
+              <div
+                class="p-6"
+                style="
+                  background: linear-gradient(
+                    135deg,
+                    rgba(0, 207, 255, 0.2),
+                    rgba(175, 255, 79, 0.2)
+                  );
+                "
+              >
+                <svg
+                  class="w-full h-48"
+                  viewbox="0 0 200 200"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <ellipse
+                    cx="100"
+                    cy="160"
+                    rx="60"
+                    ry="15"
+                    fill="#00CFFF"
+                    opacity="0.3"
+                  />
+                  <path
+                    d="M100 60 Q120 80 100 100 Q80 80 100 60"
+                    fill="#00CFFF"
+                  />
+                  <path
+                    d="M100 100 Q115 115 100 140 Q85 115 100 100"
+                    fill="#AFFF4F"
+                  />
+                  <circle cx="100" cy="85" r="15" fill="#FFEB3B" />
+                  <rect
+                    x="92"
+                    y="140"
+                    width="16"
+                    height="20"
+                    fill="#FF69B4"
+                    rx="3"
+                  />
+                </svg>
+              </div>
+              <div class="p-6">
+                <h3 class="text-2xl font-bold mb-2" style="color: #00cfff">
+                  Flor Neon
+                </h3>
+                <p class="text-gray-300 mb-4">
+                  Diseño orgánico con acabado fluorescente
+                </p>
+                <div class="flex justify-between items-center">
+                  <span class="text-2xl font-bold" style="color: #ffeb3b"
+                    >$169</span
+                  >
+                  <button
+                    class="add-to-cart px-6 py-2 rounded-full font-bold transition-all duration-300 hover:scale-105"
+                    style="background: #00cfff; color: white"
+                  >
+                    Agregar
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Product 5 -->
+            <div
+              class="product-card rounded-2xl overflow-hidden"
+              style="
+                background: rgba(175, 255, 79, 0.1);
+                border: 2px solid #afff4f;
+              "
+            >
+              <div
+                class="p-6"
+                style="
+                  background: linear-gradient(
+                    135deg,
+                    rgba(175, 255, 79, 0.2),
+                    rgba(255, 235, 59, 0.2)
+                  );
+                "
+              >
+                <svg
+                  class="w-full h-48"
+                  viewbox="0 0 200 200"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <ellipse
+                    cx="100"
+                    cy="160"
+                    rx="60"
+                    ry="15"
+                    fill="#AFFF4F"
+                    opacity="0.3"
+                  />
+                  <rect
+                    x="70"
+                    y="100"
+                    width="60"
+                    height="60"
+                    fill="#AFFF4F"
+                    rx="10"
+                  />
+                  <circle cx="85" cy="115" r="10" fill="#FFEB3B" />
+                  <circle cx="115" cy="115" r="10" fill="#FF69B4" />
+                  <path
+                    d="M85 135 Q100 145 115 135"
+                    stroke="#B413EC"
+                    stroke-width="3"
+                    fill="none"
+                  />
+                </svg>
+              </div>
+              <div class="p-6">
+                <h3 class="text-2xl font-bold mb-2" style="color: #afff4f">
+                  Cubo Feliz
+                </h3>
+                <p class="text-gray-300 mb-4">
+                  Escultura minimalista con expresión alegre
+                </p>
+                <div class="flex justify-between items-center">
+                  <span class="text-2xl font-bold" style="color: #ffeb3b"
+                    >$129</span
+                  >
+                  <button
+                    class="add-to-cart px-6 py-2 rounded-full font-bold transition-all duration-300 hover:scale-105"
+                    style="background: #afff4f; color: #1a0033"
+                  >
+                    Agregar
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Product 6 -->
+            <div
+              class="product-card rounded-2xl overflow-hidden"
+              style="
+                background: rgba(255, 235, 59, 0.1);
+                border: 2px solid #ffeb3b;
+              "
+            >
+              <div
+                class="p-6"
+                style="
+                  background: linear-gradient(
+                    135deg,
+                    rgba(255, 235, 59, 0.2),
+                    rgba(255, 105, 180, 0.2)
+                  );
+                "
+              >
+                <svg
+                  class="w-full h-48"
+                  viewbox="0 0 200 200"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <ellipse
+                    cx="100"
+                    cy="160"
+                    rx="60"
+                    ry="15"
+                    fill="#FFEB3B"
+                    opacity="0.3"
+                  />
+                  <polygon
+                    points="100,50 130,90 115,130 85,130 70,90"
+                    fill="#FFEB3B"
+                  />
+                  <circle cx="100" cy="90" r="20" fill="#FF69B4" />
+                  <rect
+                    x="90"
+                    y="130"
+                    width="20"
+                    height="30"
+                    fill="#B413EC"
+                    rx="3"
+                  />
+                </svg>
+              </div>
+              <div class="p-6">
+                <h3 class="text-2xl font-bold mb-2" style="color: #ffeb3b">
+                  Estrella Pop
+                </h3>
+                <p class="text-gray-300 mb-4">
+                  Forma estrellada con colores vibrantes pop
+                </p>
+                <div class="flex justify-between items-center">
+                  <span class="text-2xl font-bold" style="color: #ffeb3b"
+                    >$159</span
+                  >
+                  <button
+                    class="add-to-cart px-6 py-2 rounded-full font-bold transition-all duration-300 hover:scale-105"
+                    style="background: #ffeb3b; color: #1a0033"
+                  >
+                    Agregar
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Contact Section -->
+      <section
+        id="contacto"
+        class="w-full py-20 px-4"
+        style="background: rgba(255, 105, 180, 0.1)"
+      >
+        <div class="max-w-3xl mx-auto text-center">
+          <h2
+            id="contact-title"
+            class="text-4xl md:text-5xl font-bold mb-8 gradient-text"
+          >
+            Contáctanos
+          </h2>
+          <p class="text-xl text-gray-300 mb-8">
+            ¿Tienes una idea para una escultura personalizada? ¡Hablemos!
+          </p>
+          <div class="flex flex-wrap justify-center gap-6">
+            <a
+              href="https://instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="px-8 py-4 rounded-full font-bold transition-all duration-300 transform hover:scale-105"
+              style="
+                background: linear-gradient(135deg, #ff69b4, #b413ec);
+                color: white;
+              "
+            >
+              📱 Instagram
+            </a>
+            <a
+              href="mailto:info@sugarcult.studio"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="px-8 py-4 rounded-full font-bold transition-all duration-300 transform hover:scale-105"
+              style="
+                background: linear-gradient(135deg, #00cfff, #afff4f);
+                color: #1a0033;
+              "
+            >
+              ✉���� Email
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- Footer -->
+      <footer
+        class="w-full py-8 px-4 text-center"
+        style="border-top: 2px solid #b413ec"
+      >
+        <p class="text-gray-400">
+          © 2024 Sugar Cult Studio - By Clancy Pink Punk. Todos los derechos
+          reservados.
+        </p>
+      </footer>
+      <!-- Chatbot Button -->
+      <button
+        id="chatbot-toggle"
+        class="fixed bottom-8 right-8 w-16 h-16 rounded-full flex items-center justify-center text-3xl transition-all duration-300 transform hover:scale-110 z-50"
+        style="
+          background: linear-gradient(135deg, #ff69b4, #b413ec);
+          color: white;
+          box-shadow: 0 10px 30px rgba(255, 105, 180, 0.5);
+        "
+      >
+        💬
+      </button>
+      <!-- Chatbot Window -->
+      <div
+        id="chatbot-window"
+        class="chatbot-container chatbot-hidden fixed bottom-28 right-8 w-96 rounded-2xl overflow-hidden z-50"
+        style="
+          background: rgba(26, 0, 51, 0.95);
+          border: 2px solid #b413ec;
+          box-shadow: 0 20px 60px rgba(180, 19, 236, 0.4);
+          max-height: 500px;
+        "
+      >
+        <div
+          class="p-4"
+          style="
+            background: linear-gradient(135deg, #ff69b4, #b413ec);
+            color: white;
+          "
+        >
+          <div class="flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+              <div class="w-3 h-3 rounded-full bg-[#AFFF4F]"></div>
+              <h3 class="font-bold">Asistente Sugar Cult</h3>
+            </div>
+            <button
+              id="chatbot-close"
+              class="text-2xl hover:opacity-70 transition-opacity"
+            >
+              ×
+            </button>
+          </div>
+        </div>
+        <div
+          id="chat-messages"
+          class="p-4 space-y-4 overflow-y-auto"
+          style="height: 350px; background: rgba(26, 0, 51, 0.9)"
+        >
+          <div class="chat-message flex items-start space-x-2">
+            <div
+              class="w-8 h-8 rounded-full flex items-center justify-center text-sm"
+              style="background: #ff69b4"
+            >
+              🤖
+            </div>
+            <div
+              class="flex-1 p-3 rounded-lg"
+              style="background: rgba(255, 105, 180, 0.2); color: white"
+            >
+              <p id="chatbot-greeting-text">
+                ¡Hola! Soy el asistente de Sugar Cult Studio. ��En qué puedo
+                ayudarte hoy?
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="p-4"
+          style="
+            background: rgba(26, 0, 51, 0.9);
+            border-top: 1px solid #b413ec;
+          "
+        >
+          <div class="flex space-x-2">
+            <input
+              type="text"
+              id="chat-input"
+              placeholder="Escribe tu mensaje..."
+              class="flex-1 px-4 py-2 rounded-full"
+              style="
+                background: rgba(255, 255, 255, 0.1);
+                border: 1px solid #ff69b4;
+                color: white;
+                outline: none;
+              "
+            />
+            <button
+              id="chat-send"
+              class="w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
+              style="background: #ff69b4; color: white"
+            >
+              ➤
+            </button>
+          </div>
+          <div class="flex flex-wrap gap-2 mt-3">
+            <button
+              class="quick-reply px-3 py-1 rounded-full text-sm transition-all duration-300 hover:scale-105"
+              style="
+                background: rgba(255, 105, 180, 0.3);
+                color: #ff69b4;
+                border: 1px solid #ff69b4;
+              "
+            >
+              📦 Ver las piezas
+            </button>
+            <button
+              class="quick-reply px-3 py-1 rounded-full text-sm transition-all duration-300 hover:scale-105"
+              style="
+                background: rgba(180, 19, 236, 0.3);
+                color: #b413ec;
+                border: 1px solid #b413ec;
+              "
+            >
+              💰 Cuánto sale?
+            </button>
+            <button
+              class="quick-reply px-3 py-1 rounded-full text-sm transition-all duration-300 hover:scale-105"
+              style="
+                background: rgba(255, 51, 102, 0.3);
+                color: #ff3366;
+                border: 1px solid #ff3366;
+              "
+            >
+              🎨 Quiero custom
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      const defaultConfig = {
+        background_color: "#1a0033",
+        secondary_surface_color: "#330066",
+        text_color: "#ffffff",
+        primary_action_color: "#FF69B4",
+        secondary_action_color: "#B413EC",
+        font_family: "system-ui",
+        font_size: 16,
+        hero_title: "Arte Digital que Cobra Vida",
+        hero_subtitle:
+          "Esculturas únicas creadas con impresión 3D y cerámica. Donde la tecnología se encuentra con el arte tradicional.",
+        cta_button: "Explorar Colección",
+        about_title: "Sobre Nosotros",
+        about_text:
+          "Sugar Cult Studio nace de la visión de Clancy Pink Punk: crear esculturas que desafían los límites entre lo digital y lo físico, combinando la precisión de la tecnología con la calidez del arte hecho a mano.",
+        shop_title: "Nuestra Tienda",
+        contact_title: "Contáctanos",
+        chatbot_greeting:
+          "¡Hola! Soy el asistente de Sugar Cult Studio. ¿En qué puedo ayudarte hoy?",
+      };
+
+      // Element SDK initialization
+      if (window.elementSdk) {
+        window.elementSdk.init({
+          defaultConfig,
+          onConfigChange: async (config) => {
+            const customFont = config.font_family || defaultConfig.font_family;
+            const baseSize = config.font_size || defaultConfig.font_size;
+            const baseFontStack = "system-ui, -apple-system, sans-serif";
+
+            // Apply background colors
+            document.getElementById(
+              "app-wrapper"
+            ).style.background = `linear-gradient(135deg, ${
+              config.background_color || defaultConfig.background_color
+            } 0%, ${
+              config.secondary_surface_color ||
+              defaultConfig.secondary_surface_color
+            } 50%, ${
+              config.background_color || defaultConfig.background_color
+            } 100%)`;
+
+            // Apply text color
+            document.body.style.color =
+              config.text_color || defaultConfig.text_color;
+
+            // Apply primary action color to buttons
+            const ctaButton = document.getElementById("cta-button");
+            if (ctaButton) {
+              ctaButton.style.background = `linear-gradient(135deg, ${
+                config.primary_action_color ||
+                defaultConfig.primary_action_color
+              }, ${
+                config.secondary_action_color ||
+                defaultConfig.secondary_action_color
+              })`;
+            }
+
+            // Apply fonts
+            const heroTitle = document.getElementById("hero-title");
+            if (heroTitle) {
+              heroTitle.style.fontFamily = `${customFont}, ${baseFontStack}`;
+              heroTitle.style.fontSize = `${baseSize * 3}px`;
+            }
+
+            const heroSubtitle = document.getElementById("hero-subtitle");
+            if (heroSubtitle) {
+              heroSubtitle.style.fontFamily = `${customFont}, ${baseFontStack}`;
+              heroSubtitle.style.fontSize = `${baseSize * 1.25}px`;
+            }
+
+            // Update text content
+            if (heroTitle)
+              heroTitle.textContent =
+                config.hero_title || defaultConfig.hero_title;
+            if (heroSubtitle)
+              heroSubtitle.textContent =
+                config.hero_subtitle || defaultConfig.hero_subtitle;
+
+            const ctaButtonText = document.getElementById("cta-button");
+            if (ctaButtonText) {
+              ctaButtonText.textContent =
+                config.cta_button || defaultConfig.cta_button;
+              ctaButtonText.style.fontFamily = `${customFont}, ${baseFontStack}`;
+              ctaButtonText.style.fontSize = `${baseSize * 1.125}px`;
+            }
+
+            const aboutTitle = document.getElementById("about-title");
+            if (aboutTitle) {
+              aboutTitle.textContent =
+                config.about_title || defaultConfig.about_title;
+              aboutTitle.style.fontFamily = `${customFont}, ${baseFontStack}`;
+              aboutTitle.style.fontSize = `${baseSize * 2.5}px`;
+            }
+
+            const aboutText = document.getElementById("about-text");
+            if (aboutText) {
+              aboutText.textContent =
+                config.about_text || defaultConfig.about_text;
+              aboutText.style.fontFamily = `${customFont}, ${baseFontStack}`;
+              aboutText.style.fontSize = `${baseSize * 1.125}px`;
+            }
+
+            const shopTitle = document.getElementById("shop-title");
+            if (shopTitle) {
+              shopTitle.textContent =
+                config.shop_title || defaultConfig.shop_title;
+              shopTitle.style.fontFamily = `${customFont}, ${baseFontStack}`;
+              shopTitle.style.fontSize = `${baseSize * 2.5}px`;
+            }
+
+            const contactTitle = document.getElementById("contact-title");
+            if (contactTitle) {
+              contactTitle.textContent =
+                config.contact_title || defaultConfig.contact_title;
+              contactTitle.style.fontFamily = `${customFont}, ${baseFontStack}`;
+              contactTitle.style.fontSize = `${baseSize * 2.5}px`;
+            }
+
+            const chatbotGreeting = document.getElementById(
+              "chatbot-greeting-text"
+            );
+            if (chatbotGreeting) {
+              chatbotGreeting.textContent =
+                config.chatbot_greeting || defaultConfig.chatbot_greeting;
+              chatbotGreeting.style.fontFamily = `${customFont}, ${baseFontStack}`;
+              chatbotGreeting.style.fontSize = `${baseSize}px`;
+            }
+          },
+          mapToCapabilities: (config) => ({
+            recolorables: [
+              {
+                get: () =>
+                  config.background_color || defaultConfig.background_color,
+                set: (value) => {
+                  config.background_color = value;
+                  window.elementSdk.setConfig({ background_color: value });
+                },
+              },
+              {
+                get: () =>
+                  config.secondary_surface_color ||
+                  defaultConfig.secondary_surface_color,
+                set: (value) => {
+                  config.secondary_surface_color = value;
+                  window.elementSdk.setConfig({
+                    secondary_surface_color: value,
+                  });
+                },
+              },
+              {
+                get: () => config.text_color || defaultConfig.text_color,
+                set: (value) => {
+                  config.text_color = value;
+                  window.elementSdk.setConfig({ text_color: value });
+                },
+              },
+              {
+                get: () =>
+                  config.primary_action_color ||
+                  defaultConfig.primary_action_color,
+                set: (value) => {
+                  config.primary_action_color = value;
+                  window.elementSdk.setConfig({ primary_action_color: value });
+                },
+              },
+              {
+                get: () =>
+                  config.secondary_action_color ||
+                  defaultConfig.secondary_action_color,
+                set: (value) => {
+                  config.secondary_action_color = value;
+                  window.elementSdk.setConfig({
+                    secondary_action_color: value,
+                  });
+                },
+              },
+            ],
+            borderables: [],
+            fontEditable: {
+              get: () => config.font_family || defaultConfig.font_family,
+              set: (value) => {
+                config.font_family = value;
+                window.elementSdk.setConfig({ font_family: value });
+              },
+            },
+            fontSizeable: {
+              get: () => config.font_size || defaultConfig.font_size,
+              set: (value) => {
+                config.font_size = value;
+                window.elementSdk.setConfig({ font_size: value });
+              },
+            },
+          }),
+          mapToEditPanelValues: (config) =>
+            new Map([
+              ["hero_title", config.hero_title || defaultConfig.hero_title],
+              [
+                "hero_subtitle",
+                config.hero_subtitle || defaultConfig.hero_subtitle,
+              ],
+              ["cta_button", config.cta_button || defaultConfig.cta_button],
+              ["about_title", config.about_title || defaultConfig.about_title],
+              ["about_text", config.about_text || defaultConfig.about_text],
+              ["shop_title", config.shop_title || defaultConfig.shop_title],
+              [
+                "contact_title",
+                config.contact_title || defaultConfig.contact_title,
+              ],
+              [
+                "chatbot_greeting",
+                config.chatbot_greeting || defaultConfig.chatbot_greeting,
+              ],
+            ]),
+        });
+      }
+
+      // Chatbot functionality
+      const chatbotToggle = document.getElementById("chatbot-toggle");
+      const chatbotWindow = document.getElementById("chatbot-window");
+      const chatbotClose = document.getElementById("chatbot-close");
+      const chatMessages = document.getElementById("chat-messages");
+      const chatInput = document.getElementById("chat-input");
+      const chatSend = document.getElementById("chat-send");
+      const quickReplies = document.querySelectorAll(".quick-reply");
+
+      let chatbotOpen = false;
+
+      chatbotToggle.addEventListener("click", () => {
+        chatbotOpen = !chatbotOpen;
+        chatbotWindow.classList.toggle("chatbot-hidden");
+        chatbotWindow.classList.toggle("chatbot-visible");
+      });
+
+      chatbotClose.addEventListener("click", () => {
+        chatbotOpen = false;
+        chatbotWindow.classList.add("chatbot-hidden");
+        chatbotWindow.classList.remove("chatbot-visible");
+      });
+
+      function addMessage(text, isBot = true) {
+        const messageDiv = document.createElement("div");
+        messageDiv.className = "chat-message flex items-start space-x-2";
+
+        if (isBot) {
+          messageDiv.innerHTML = `
+          <div class="w-8 h-8 rounded-full flex items-center justify-center text-sm" style="background: #FF69B4;">🤖</div>
+          <div class="flex-1 p-3 rounded-lg" style="background: rgba(255, 105, 180, 0.2); color: white;">
+            <p>${text}</p>
+          </div>
+        `;
+        } else {
+          messageDiv.innerHTML = `
+          <div class="flex-1 p-3 rounded-lg text-right" style="background: rgba(180, 19, 236, 0.2); color: white;">
+            <p>${text}</p>
+          </div>
+          <div class="w-8 h-8 rounded-full flex items-center justify-center text-sm" style="background: #B413EC;">👤</div>
+        `;
+        }
+
+        chatMessages.appendChild(messageDiv);
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+      }
+
+      function getBotResponse(userMessage) {
+        const message = userMessage.toLowerCase();
+
+        if (message.includes("producto") || message.includes("ver")) {
+          return 'Bestie tenemos 6 esculturas que slayean! 💅 Desde la "Escultura Prisma" hasta la "Estrella Pop". Todo es 3D print + cerámica. ¿Quieres el tea sobre alguna? Spill! 🎨';
+        } else if (
+          message.includes("precio") ||
+          message.includes("costo") ||
+          message.includes("cuanto")
+        ) {
+          return "Los precios van desde $129 hasta $199, dependiendo del vibe de cada pieza. Calidad premium, no cap. Material top tier fr fr. 💰✨";
+        } else if (
+          message.includes("personalizar") ||
+          message.includes("custom") ||
+          message.includes("diseño")
+        ) {
+          return "Yaaas! 🙌 Hacemos piezas custom que van a comer y no van a dejar migajas. Cuéntame tu idea y la hacemos realidad. Proyectos custom desde $250. It's giving main character vibes! 🎨💜";
+        } else if (message.includes("envio") || message.includes("entrega")) {
+          return "Enviamos a toda España y Europa bestie! 📦 Llega en 5-7 días. Todo viene súper protegido, no te preocupes. We got you! 💪";
+        } else if (
+          message.includes("hola") ||
+          message.includes("hello") ||
+          message.includes("hi")
+        ) {
+          return "Yoo! 💜 What's good bestie? ¿Te late alguna de nuestras esculturas o prefieres algo custom? I'm here for it! 😊✨";
+        } else if (message.includes("gracias")) {
+          return "De nada bestie! 💅 Si tienes más preguntas, aquí estoy. También nos puedes textear por Insta o email. Stay iconic! ✨💜";
+        } else {
+          return "Oop, no entendí eso bestie! 😅 Para más info específica, mejor textéanos por Insta o email. We'll get back to you ASAP! 💬✨";
+        }
+      }
+
+      chatSend.addEventListener("click", () => {
+        const message = chatInput.value.trim();
+        if (message) {
+          addMessage(message, false);
+          chatInput.value = "";
+
+          setTimeout(() => {
+            const response = getBotResponse(message);
+            addMessage(response, true);
+          }, 1000);
+        }
+      });
+
+      chatInput.addEventListener("keypress", (e) => {
+        if (e.key === "Enter") {
+          chatSend.click();
+        }
+      });
+
+      quickReplies.forEach((button) => {
+        button.addEventListener("click", () => {
+          const message = button.textContent.trim();
+          addMessage(message, false);
+
+          setTimeout(() => {
+            let response = "";
+            if (message.includes("piezas")) {
+              response =
+                'Bestie tenemos 6 esculturas que slayean! 💅 Desde la "Escultura Prisma" hasta la "Estrella Pop". Todo es 3D print + cerámica. Scroll para arriba y vas a verlas todas! 🎨✨';
+            } else if (message.includes("sale")) {
+              response =
+                'Los precios van desde $129 hasta $199 bestie! La "Escultura Prisma" $149, "Órbita Celestial" $199, "Cristal Digital" $179, "Flor Neon" $169, "Cubo Feliz" $129, y "Estrella Pop" $159. Todo premium, no cap! 💰💅';
+            } else if (message.includes("custom")) {
+              response =
+                "Yaaas! 🙌 Hacemos diseños custom que van a slayear! Cuéntanos tu idea y la hacemos realidad con 3D print + cerámica. Proyectos desde $250. Contáctanos por Insta o email para empezar! It's giving iconic! 🎨💜✨";
+            }
+            addMessage(response, true);
+          }, 1000);
+        });
+      });
+
+      // Smooth scroll for navigation
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({ behavior: "smooth", block: "start" });
+          }
+        });
+      });
+
+      // Add to cart simulation
+      document.querySelectorAll(".add-to-cart").forEach((button) => {
+        button.addEventListener("click", function () {
+          const originalText = this.textContent;
+          this.textContent = "✓ Added bestie!";
+          this.style.opacity = "0.7";
+
+          setTimeout(() => {
+            this.textContent = originalText;
+            this.style.opacity = "1";
+          }, 2000);
+        });
+      });
+
+      // CTA button scroll to shop
+      document.getElementById("cta-button").addEventListener("click", () => {
+        document
+          .getElementById("tienda")
+          .scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+    </script>
+    <script>
+      (function () {
+        function c() {
+          var b = a.contentDocument || a.contentWindow.document;
+          if (b) {
+            var d = b.createElement("script");
+            d.innerHTML =
+              "window.__CF$cv$params={r:'9b44f650a48beef2',t:'MTc2Njc5ODA3Ny4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";
+            b.getElementsByTagName("head")[0].appendChild(d);
+          }
+        }
+        if (document.body) {
+          var a = document.createElement("iframe");
+          a.height = 1;
+          a.width = 1;
+          a.style.position = "absolute";
+          a.style.top = 0;
+          a.style.left = 0;
+          a.style.border = "none";
+          a.style.visibility = "hidden";
+          document.body.appendChild(a);
+          if ("loading" !== document.readyState) c();
+          else if (window.addEventListener)
+            document.addEventListener("DOMContentLoaded", c);
+          else {
+            var e = document.onreadystatechange || function () {};
+            document.onreadystatechange = function (b) {
+              e(b);
+              "loading" !== document.readyState &&
+                ((document.onreadystatechange = e), c());
+            };
+          }
+        }
+      })();
+    </script>
+  </body>
+</html>
